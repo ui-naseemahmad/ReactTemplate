@@ -1,0 +1,96 @@
+.quar-Testimonials {
+    background-image: url('https://tunatheme.com/tf/react/quarter-preview/quarter/assets/img/bg/20.jpg');
+    background-size: auto;
+    background-position: top center;
+    background-repeat: no-repeat;
+    padding: 70px 0 0;
+}
+.quar-TestimonialSection {
+    background-image: url('https://tunatheme.com/tf/react/quarter-preview/quarter/assets/img/bg/20.jpg');
+    background-size: auto;
+    background-position: top center;
+    background-repeat: no-repeat;
+    padding:30px 0 0;
+    position: relative;
+}
+.quar-TestimonialMain {
+    padding: 30px 35px 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px 0 rgba(23, 44, 82, 0.1);
+    border: 1px solid #f1f8ff;
+    position: relative;
+    background: #fff;
+}
+.quar-testimonial-info p {
+    font-size: 18px;
+    line-height: 32px;
+    color: var(--paragraph-color);
+    margin-bottom: 25px;
+}
+.quar-testimoni-info-inner {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+.quar-testimoni-img img {
+    width: 100%;
+    max-width: 60px;
+    border-radius: 100%;
+}
+.quar-testimoni-name-designation h5 {
+    font-size: 18px;
+    line-height: 23px;
+    color: var(--heading-color);
+    font-family: 'Poppins';
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+.quar-testimoni-name-designation label {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--paragraph-color);
+}
+.quar-testimonial-info p svg {
+    font-size: 26px;
+    transition: 0.3s all;
+}
+.quar-TestimonialMain::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 0;
+    background: var(--primary-color);
+    transition: 0.5s all;
+}
+.quar-TestimonialMain:hover::after {
+    width: 100%;
+}
+.quar-TestimonialMain:hover  svg {
+    color:var(--primary-color) !important;
+}
+
+.quar-Testimonials .slick-prev {
+    border-radius: 50%;
+    height: 50px !important;
+    width: 50px !important;
+}
+
+.quar-Testimonials .slick-next {
+    border-radius: 50%;
+    height: 50px !important;
+    width: 50px !important;
+}
+
+
+@media screen and (min-width: 1025px) {
+    .quar-Testimonials .slick-slider:hover .slick-prev{
+        left: -40px !important;
+    }
+    
+    .quar-Testimonials .slick-slider:hover .slick-next {
+        right: -40px !important;
+    }
+    
+}

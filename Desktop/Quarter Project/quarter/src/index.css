@@ -1,0 +1,117 @@
+:root{
+  --primary-color:#ff5a3c;
+  --secondary-color:#0b2c3d;
+  --primary-color2:#cb3421;
+  --heading-color:#071c1f;
+  --paragraph-color:#5c727d;
+}
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&family=Poppins:wght@400;500;600;700;800;900&display=swap");
+body {
+  margin: 0;
+  font-family: Nunito Sans, sans-serif;
+  padding:0
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul,ul li{
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+}
+ul li a{
+ text-decoration: none;
+ }
+.container
+ {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+a{
+  text-decoration: none;
+}
+
+.quar-Btn {
+  padding: 16px 40px;
+  color: #000;
+  border: 1px solid#000;
+}
+
+.quar-Btn.primary {
+  background: var(--primary-color);
+  padding: 16px 40px;
+  color: #fff;
+  border: 1px solid transparent;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+.quar-Btn.primary::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  width: 0;
+  height: 100%;
+  transition: 0.3s all;
+  z-index: -1;
+}
+a.quar-Btn.primary:hover {
+  color: #000;
+  border: 1px solid #000;
+}
+a.quar-Btn.secondary:hover {
+  color: #fff;
+
+}
+.quar-Btn.primary:hover::after {
+  width: 100%;
+}
+.quar-Btn.secondary {
+  background: transparent;
+  padding: 16px 40px;
+  color: #000;
+  border: 1px solid #e4e4e4e4;
+  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+.quar-Btn.secondary::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #000;
+  width: 0;
+  height: 100%;
+  transition: 0.3s all;
+  z-index: -1;
+}
+.quar-Btn.secondary:hover::after {
+  width: 100%;
+}
+.quar-Btn.listing {
+  display: flex;
+  align-items: center;
+  background: var(--primary-color);
+  padding: 0 20px;
+  font-size: 14px;
+  font-weight: 700;
+  transition: 0.3s all;
+  color: #fff;
+}
+.quar-d-none {
+  display: none !important;
+}
+
+
+/*RESPONSIVE*/
+

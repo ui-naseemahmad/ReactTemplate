@@ -1,0 +1,192 @@
+.quar-HeroSection {
+    background: #f2f6f7;
+    padding: 80px 0;
+}
+.quar-HeroSectionMain {
+    display: flex;
+    justify-content: space-between;
+}
+.sliderImgg img {
+    width: 100%;
+}
+.quar-HeroSectionMain__leftItem {
+    flex: 0 0 40%;
+}
+.quar-HeroSectionMain__rightItem {
+    flex: 0 0 40%;
+}
+.quar-sliderSubheading {
+    display: flex;
+    column-gap: 6px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.subheadingIcon svg {
+    color: var(--primary-color);
+}
+.quar-sliderHeading {
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #071c1f;
+}
+.quar-sliderDescription {
+    font-size: 16px;
+    color: #5c727d;
+    line-height: 26px;
+    margin-bottom: 40px;
+    padding-left: 30px;
+    border-left: 1px solid #576466;
+}
+
+.quar-play-btn {
+    padding: 21px;
+    margin-left: 10px;
+    background: #fff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    text-align: center;
+    box-shadow: rgb(149 157 165 / 10%) 0px 8px 24px;
+}
+.quar-play-btn svg, .quar-play-btn2 svg {
+    color: var(--primary-color);
+}
+.slick-prev {
+
+    background: #f2f6f7 !important;
+    z-index: 1;
+    color: #000 !important;
+    height: 60px !important;
+    width: 60px !important;
+    border: 1px solid #e5eaee !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s all;
+}
+
+.slick-next {
+    background: #f2f6f7 !important;
+    z-index: 1;
+    color: #000 !important;
+    height: 60px !important;
+    width: 60px !important;
+    border: 1px solid #e5eaee !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s all;
+}
+.slick-arrow.slick-prev svg, .slick-arrow.slick-next svg {
+    height: 24px;
+    width: 24px;
+}
+.slick-prev:before, .slick-next::before{
+    display: none !important
+}
+
+.slick-arrow.slick-prev:hover, .slick-arrow.slick-next:hover {
+    background: var(--primary-color) !important;
+    color: #fff !important;
+    border: 1px solid var(--primary-color) !important;
+}
+
+.quar-HeroSectionMain__leftItem > a.secondary {
+    margin-left: 10px;
+}
+
+.slick-slide[data-index="1"]  .quar-sliderDescription {
+    font-size: 16px;
+    color: #5c727d;
+    line-height: 26px;
+    margin-bottom: 40px;
+    padding-right: 30px;
+    border-left:unset;
+    border-right: 1px solid #576466;
+}
+.slick-slide[data-index="1"] .quar-HeroSectionMain {
+    text-align: right;
+}
+.slick-slide[data-index="1"] .quar-sliderSubheading {
+    justify-content: end;
+}
+
+@media screen and (min-width: 769px) {
+    .slick-slide[data-index="1"] .quar-HeroSectionMain {
+        flex-direction: row-reverse;
+        text-align: right;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .slick-slider:hover .slick-prev{
+        left: 20px !important;
+        opacity: 1;
+        visibility:visible;
+    }
+    
+    .slick-slider:hover .slick-next {
+        right: 20px !important;
+        opacity: 1;
+        visibility:visible;
+    }
+    .slick-prev,  .slick-next {
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s all;
+    }
+    .slick-prev {
+        left: 40px !important;
+    }
+    .slick-next {
+        right: 40px !important;
+    }
+    
+}
+
+@media screen and (max-width: 1024px) {
+    .slick-next {
+        right: 10px !important;
+    }
+    .slick-prev {
+        left: 10px !important;
+    }
+}
+@media screen and (max-width: 992px) {
+    .quar-HeroSection {
+        padding: 80px 0;
+    }
+    .quar-HeroSectionMain {
+        flex-direction: column;
+        row-gap: 60px;
+    }
+    .quar-HeroSectionMain__leftItem {
+        max-width: 70%;
+    }
+   
+}
+
+@media screen and (max-width: 500px) {
+    .quar-HeroSectionMain__leftItem {
+        max-width: 100%;
+    }
+    .quar-sliderHeading {
+        font-size: 26px;
+        line-height: 36px;
+        margin-bottom: 15px;
+    }
+    .quar-HeroSectionMain__leftItem > a.secondary {
+         margin-left:0;
+        float: right;
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    .quar-HeroSectionMain__leftItem .quar-Btn.primary {
+        float: left;
+        padding-right: 30px;
+    }
+}

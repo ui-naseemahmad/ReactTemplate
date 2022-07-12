@@ -1,0 +1,139 @@
+.quar-ApartmentSection {
+    padding: 20px 0;
+}
+.quar-ApartmentMain {
+    display: flex;
+    column-gap: 30px;
+}
+.quar-ApartmentMain > div {
+    flex: 0 0 50%;
+}
+.quar-apartments--plan {
+    background: var(--primary-color);
+    padding: 70px;
+}
+.quar-apartments--plan h2 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 39px;
+    color: #fff;
+    margin-bottom: 15px;
+    font-family: 'Poppins';
+}
+.quar-apartments--plan p {
+    font-size: 16px;
+    color: #fff;
+    line-height: 28px;
+    margin-bottom: 15px;
+}
+.quar-apartments--info > ul {
+    padding: 0;
+    margin: 0;
+}
+.quar-apartments--info {
+    margin-top: 40px;
+}
+.quar-apartments--info > ul li {
+    color: #fff;
+    margin-top: 10px;
+    font-weight: 600;
+    line-height: 28px;
+    position: relative;
+}
+.quar-apartments--info > ul li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 0;
+    width: 98%;
+    border: 1px dashed;
+    z-index: 2;
+}
+.quar-apartments--info > ul li label {
+    padding-right: 10px;
+    position: relative;
+    z-index: 2;
+    background-color:var(--primary-color);
+}
+.quar-apartments--info > ul li span {
+    float: right;
+    padding-left: 10px;
+    position: relative;
+    z-index: 2;
+    background-color: var(--primary-color);
+}
+.quar-tabs {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 10px 0;
+}
+.quar-tabs span {
+    font-size: 20px;
+    margin-right: 50px;
+    margin-bottom: 10px;
+    display: inline-block;
+    color: #000;
+    font-weight: 600;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    position:relative;
+}
+span.activeTab {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    background: transparent;
+}
+.quar-tabs span::before {
+    content: "";
+    position: absolute;
+    top: 80%;
+    right: 45%;
+    height: 6px;
+    width: 6px;
+    background: transparent;
+    border-radius: 100%;
+    border: 3px solid transparent;
+}
+
+.quar-tabs span.activeTab::before {
+    background-color: var(--primary-color);
+    border: 3px solid #fff;
+}
+
+@media screen and (max-width: 1024px) {
+   .quar-Apartment-image {
+     height: 100%;
+   }
+ }
+
+ @media screen and (max-width: 992px) {
+    .quar-ApartmentMain {
+        flex-wrap: wrap;
+        row-gap: 50px;
+    }
+    .quar-ApartmentMain > div {
+        flex: 0 0 100%;
+    }
+    .ImgText-img1 {
+        max-width: 100%;
+    }
+    .quar-tabs span {
+        margin-right: 35px;
+    }
+ }
+
+ @media screen and (max-width: 768px) {
+    .quar-tabs span {
+        font-size: 16px;
+        margin-bottom: 0;
+    }
+    
+ }
+
+ @media screen and (max-width: 500px) {
+    .quar-apartments--plan {
+        padding: 20px;
+    }
+}

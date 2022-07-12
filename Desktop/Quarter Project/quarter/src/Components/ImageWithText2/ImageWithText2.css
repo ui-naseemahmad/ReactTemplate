@@ -1,0 +1,95 @@
+.quar-ImgTextSection2 {
+    padding: 80px 0;
+}
+.quar-ImgTextMain2 {
+    display: flex;
+    column-gap: 40px;
+}
+.quar-ImgTextMain2 > div {
+    flex: 0 0 50%;
+}
+ul.quar-properties-imges li {
+    width: 30%;
+    margin-right: 10px;
+    display: inline-block;
+    max-width: 160px;
+}
+.quar-properties-imges li img {
+    width: 100%;
+    max-width: 160px;
+}
+.quar-facility-lists {
+    padding-left: 30px;
+    margin-bottom: 30px;
+   
+}
+.quar-facility-lists li{
+    position: relative;
+}
+
+.quar-facility-lists li::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -30px;
+    height: 1px;
+    width: 15px;
+    background: var(--primary-color);
+    top: 50%;
+    transform: translateY(-50%);
+}
+.quar-facility-lists li {
+    margin-top: 15px;
+    color: var(--paragraph-color);
+    margin-bottom: 20px;
+}
+.quar-facility-lists2 {
+    margin-bottom: 30px;
+}
+.quar-facility-lists2 li {
+    display: inline-block;
+    margin-right: 30px;
+    font-size: 14px;
+    color: var(--paragraph-color);
+    position: relative;
+}
+.quar-facility-lists2 li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -16px;
+    height: 100%;
+    width: 1px;
+    background: #cdc8c8;
+}
+.quar-facility-lists2 li span {
+    display: block;
+    font-weight: 700;
+}
+.quar-facility-lists2 li span svg {
+    font-size: 18px;
+}
+
+
+@media screen and (max-width: 1024px) {
+   .quar-ImgText2-image {
+      height: 100%;
+    }
+    .quar-ImgTextMain2 {
+      column-gap: 0;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .quar-ImgTextMain2 {
+        flex-direction: column;
+        padding: 0 15px;
+    }
+}
+@media screen and (max-width: 500px) {
+.quar-facility-lists2 li {
+    margin-right: 14px;
+    font-size: 12px;
+}
+}

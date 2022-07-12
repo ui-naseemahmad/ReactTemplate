@@ -1,0 +1,100 @@
+.quar-Services {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 42px 0;
+    box-shadow: 0 16px 32px 0 rgba(7, 28, 31, 0.1);
+    transform: translateY(-50px);
+    background: #fff;
+}
+.quar-Services form {
+    display: flex;
+    column-gap: 30px;
+    justify-content: center;
+}
+select {
+    padding: 17px 120px 17px 24px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    border-color: #e8e8e8;
+    background: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+
+}
+select.minimal {
+    background-image:
+      linear-gradient(45deg, transparent 50%, gray 50%),
+      linear-gradient(135deg, gray 50%, transparent 50%),
+      linear-gradient(to right, #fff, #fff);
+    background-position:
+      calc(100% - 20px) calc(1.4em + 2px),
+      calc(100% - 15px) calc(1.4em + 2px),
+      calc(100% - 2.5em) 0.5em;
+    background-size:
+      5px 5px,
+      5px 5px,
+      1px 1.5em;
+    background-repeat: no-repeat;
+  }
+  
+  select.minimal:focus {
+    background-image:
+      linear-gradient(45deg, gray 50%, transparent 50%),
+      linear-gradient(135deg, transparent 50%, gray 50%),
+      linear-gradient(to right, #fff, #fff);
+    background-position:
+      calc(100% - 15px) 1.4em,
+      calc(100% - 20px) 1.4em,
+      calc(100% - 2.5em) 0.5em;
+    background-size:
+      5px 5px,
+      5px 5px,
+      1px 1.5em;
+    background-repeat: no-repeat;
+    outline: 0;
+  }
+  
+
+
+
+
+
+
+  @media screen and (max-width: 1024px) {
+    .quar-Services select {
+      padding: 17px 80px 17px 24px;  
+    }
+}
+
+@media screen and (max-width: 992px) {
+  .quar-Services form { 
+    column-gap: 10px;
+  }
+  .quar-Services select {
+    padding: 14px 40px 14px 18px;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .quar-Services {
+    max-width: 600px;
+    margin: 0 auto;
+    transform: translateY(20px);
+  }
+  .quar-Services form {
+    flex-direction: column;
+    max-width: 70%;
+    margin: 0 auto;
+    row-gap: 25px;
+}
+}
+
+@media screen and (max-width: 500px) {
+  .quar-Services {
+    max-width: 350px;
+  }
+}
