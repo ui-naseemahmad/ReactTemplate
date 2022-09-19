@@ -1,0 +1,2365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/@shopify/polaris@9.8.0/build/esm/styles.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <title>Document</title>
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <div style="height:500px">
+    <div class="Polaris-Frame Polaris-Frame--hasNav Polaris-Frame--hasTopBar" data-polaris-layer="true"
+      data-has-navigation="true">
+      <div class="Polaris-Frame__Skip">
+        <a href="#AppFrameMain">Skip to content</a>
+      </div>
+
+      <div class="Polaris-Frame__TopBar Custom_PolarisFrameTopbar" id="AppFrameTopBar">
+        <div class="Polaris-TopBar">
+          <!-- <div class="new-overlay"></div> -->
+          <button type="button" class="Polaris-TopBar__NavigationIcon" data-toggle="tooltip" title="Hide Sidebar Menu"
+            style="display: block;" data-original-title="Hide Sidebar Menu">
+            <span class="Polaris-Icon Polaris-Icon--colorWhite">
+              <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true">
+                <path
+                  d="M17 9H5.414l3.293-3.293a.999.999 0 1 0-1.414-1.414l-5 5a.999.999 0 0 0 0 1.414l5 5a.997.997 0 0 0 1.414 0 .999.999 0 0 0 0-1.414L5.414 11H17a1 1 0 1 0 0-2">
+                </path>
+              </svg>
+            </span>
+          </button>
+          <div class="Polaris-TopBar__LogoContainer pl-0">
+            <span class="notification fa fa-bell-o" style="display: none;">
+              <span class="blinker"></span>
+              <span class="header_notice">
+                <span>Our app is compatible with the latest version (V3) of Walmart.</span>
+              </span>
+            </span>
+            <a class="Polaris-TopBar__LogoLink" style="padding-top:10px" href="/integration/walmart"
+              data-polaris-unstyled="true">
+              <img class="Polaris-TopBar__Logo" border="0"
+                src="https://dev.apps.cedcommerce.com/integration/static/modules/walmart/assets/images/logo.png">
+            </a>
+          </div>
+          <div class="Polaris-TopBar__Contents">
+            <div class="Header-notification position-relative mr-15 c-pointer">
+              <a href="/integration/walmart/getnotification">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                  stroke="#9b9fd2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                  <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                </svg>
+              </a>
+
+            </div>
+            <div>
+              <div class="Polaris-TopBar-Menu__ActivatorWrapper position-relative">
+                <button id="open-popover" type="button" class="Polaris-TopBar-Menu__Activator open-popover" tabindex="0"
+                  aria-controls="Popover1" aria-owns="Popover1" aria-haspopup="true" aria-expanded="false">
+                  <div class="Polaris-MessageIndicator__MessageIndicatorWrapper">
+                    <span aria-label="Avatar with initials D" role="img"
+                      class="Polaris-Avatar Polaris-Avatar--styleThree Polaris-Avatar--sizeSmall">
+                      <span class="Polaris-Avatar__Initials">WM</span>
+                    </span>
+                  </div>
+                  <span class="Polaris-TopBar-UserMenu__Details">
+                    <p class="Polaris-TopBar-UserMenu__Name">Welcome, </p>
+                    <p class="Polaris-TopBar-UserMenu__Detail" target="_blank">
+                      wmx-123</p>
+                  </span>
+                  <div class="show_store_info" style="display: none">
+                    <ul>
+                      <li>
+                        <a href="/integration/walmart/profile/index">
+                          <span>
+                            <svg class="p_v3ASA" viewBox="0 0 20 20" focusable="false" aria-hidden="true">
+                              <g>
+                                <path
+                                  d="M10 2a8 8 0 1 0 8 8 8.011 8.011 0 0 0-8-8zm0 14a5.943 5.943 0 0 1-3.28-.98 5.855 5.855 0 0 1 6.56 0A5.943 5.943 0 0 1 10 16zm4.78-2.39a7.95 7.95 0 0 0-9.56 0A5.887 5.887 0 0 1 4 10a6 6 0 0 1 12 0 5.887 5.887 0 0 1-1.22 3.61z">
+                                </path>
+                                <path d="M10 5a3 3 0 1 0 3 3 3.009 3.009 0 0 0-3-3zm0 4a1 1 0 1 1 1-1 1 1 0 0 1-1 1z">
+                                </path>
+                              </g>
+                            </svg>
+                          </span>
+                          Profile
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/integration/walmart/site/logout">
+                          <span>
+                            <svg class="p_v3ASA" viewBox="0 0 20 20" focusable="false" aria-hidden="true">
+                              <path
+                                d="M10 16a1 1 0 1 1 0 2c-4.411 0-8-3.589-8-8s3.589-8 8-8a1 1 0 1 1 0 2c-3.309 0-6 2.691-6 6s2.691 6 6 6zm7.707-6.707a.999.999 0 0 1 0 1.414l-3 3a.997.997 0 0 1-1.414 0 .999.999 0 0 1 0-1.414L14.586 11H10a1 1 0 1 1 0-2h4.586l-1.293-1.293a.999.999 0 1 1 1.414-1.414l3 3z"
+                                fill-rule="evenodd"></path>
+                            </svg>
+                          </span>
+                          Logout
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </button>
+                <div id="topbar-user-menu" class="Polaris-Popover position-absolute" style="display: none;">
+                  <div class="Polaris-Popover__Wrapper">
+                    <div class="Polaris-Popover__Content">
+                      <div
+                        class="Polaris-Popover__Pane Polaris-Scrollable Polaris-Scrollable--vertical Polaris-Scrollable--hasBottomShadow"
+                        data-polaris-scrollable="true">
+                        <div class="Polaris-ActionList">
+                          <div>
+                            <ul class="Polaris-ActionList__Actions">
+                              <li>
+                                <button type="button" class="Polaris-ActionList__Item"
+                                  onclick="window.location.href='/integration/walmart/profile/index';">
+                                  <div class="Polaris-ActionList__Content">
+                                    <div class="Polaris-ActionList__Image">
+                                      <span class="Polaris-Icon">
+                                        <svg class="p_v3ASA" viewBox="0 0 20 20" focusable="false" aria-hidden="true">
+                                          <g>
+                                            <path
+                                              d="M10 2a8 8 0 1 0 8 8 8.011 8.011 0 0 0-8-8zm0 14a5.943 5.943 0 0 1-3.28-.98 5.855 5.855 0 0 1 6.56 0A5.943 5.943 0 0 1 10 16zm4.78-2.39a7.95 7.95 0 0 0-9.56 0A5.887 5.887 0 0 1 4 10a6 6 0 0 1 12 0 5.887 5.887 0 0 1-1.22 3.61z">
+                                            </path>
+                                            <path
+                                              d="M10 5a3 3 0 1 0 3 3 3.009 3.009 0 0 0-3-3zm0 4a1 1 0 1 1 1-1 1 1 0 0 1-1 1z">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                      </span>
+                                    </div>
+                                    <div class="Polaris-ActionList__Text">
+                                      Profile
+                                    </div>
+                                  </div>
+                                </button>
+                              </li>
+                              <li>
+                                <button type="button" class="Polaris-ActionList__Item"
+                                  onclick="window.location.href='/integration/walmart/site/logout';">
+                                  <div class="Polaris-ActionList__Content">
+                                    <div class="Polaris-ActionList__Image">
+                                      <span class="Polaris-Icon">
+                                        <svg class="p_v3ASA" viewBox="0 0 20 20" focusable="false" aria-hidden="true">
+                                          <path
+                                            d="M10 16a1 1 0 1 1 0 2c-4.411 0-8-3.589-8-8s3.589-8 8-8a1 1 0 1 1 0 2c-3.309 0-6 2.691-6 6s2.691 6 6 6zm7.707-6.707a.999.999 0 0 1 0 1.414l-3 3a.997.997 0 0 1-1.414 0 .999.999 0 0 1 0-1.414L14.586 11H10a1 1 0 1 1 0-2h4.586l-1.293-1.293a.999.999 0 1 1 1.414-1.414l3 3z"
+                                            fill-rule="evenodd"></path>
+                                        </svg>
+                                      </span>
+                                    </div>
+                                    <div class="Polaris-ActionList__Text">Logout
+                                    </div>
+                                  </div>
+                                </button>
+                              </li>
+                            </ul>
+                            <p class="Polaris-ActionList__Title">Switch to other apps
+                            </p>
+                            <ul class="Polaris-ActionList__Actions">
+                              <li>
+                                <a class="Polaris-ActionList__Item"
+                                  href="https://apps.shopify.com/newegg-marketplace-integration" target="_blank">
+                                  <div class="Polaris-ActionList__Content">
+                                    <div class="Polaris-ActionList__Text">Newegg Us</div>
+                                  </div>
+                                </a>
+                              </li>
+                              <li>
+                                <a class="Polaris-ActionList__Item"
+                                  href="https://apps.shopify.com/neweggcanada-marketplace-integration" target="_blank">
+                                  <div class="Polaris-ActionList__Content">
+                                    <div class="Polaris-ActionList__Text">Newegg Ca</div>
+                                  </div>
+                                </a>
+                              </li>
+                              <li>
+                                <a class="Polaris-ActionList__Item"
+                                  href="https://apps.shopify.com/sears-marketplace-integration" target="_blank">
+                                  <div class="Polaris-ActionList__Content">
+                                    <div class="Polaris-ActionList__Text">Sears</div>
+                                  </div>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="Polaris-Frame__Navigation customsidebar" id="AppFrameNav" style="/* top: 100px; */">
+        <nav class="Polaris-Navigation" style="padding-bottom: calc(44px + env(safe-area-inset-bottom));">
+          <div class="Polaris-Navigation__PrimaryNavigation Polaris-Scrollable Polaris-Scrollable--vertical"
+            data-polaris-scrollable="true">
+
+            <ul class="Polaris-Navigation__Section">
+              <li class="Polaris-Navigation__ListItem active">
+                <a class="Polaris-Navigation__Item position-relative custom-list has-sibling Polaris-Navigation__Item--selected "
+                  href="/integration/walmart/site/index">
+                  <div class="Polaris-Navigation__Icon">
+                    <span class="Polaris-Icon">
+                      <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M18 7.261V17.5c0 .841-.672 1.5-1.5 1.5h-2c-.828 0-1.5-.659-1.5-1.5V13H7v4.477C7 18.318 6.328 19 5.5 19h-2c-.828 0-1.5-.682-1.5-1.523V7.261a1.5 1.5 0 01.615-1.21l6.59-4.82a1.481 1.481 0 011.59 0l6.59 4.82A1.5 1.5 0 0118 7.26z">
+                        </path>
+                      </svg> </span>
+                  </div>
+                  <span class="Polaris-Navigation__Text">Dashboard</span>
+                </a>
+              </li>
+              <li class="Polaris-Navigation__ListItem">
+                <a class="Polaris-Navigation__Item custom-list has-sibling ">
+                  <div class="Polaris-Navigation__Icon">
+                    <span class="Polaris-Icon">
+                      <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M10.379 0a1.5 1.5 0 011.06.44l4.122 4.12A1.5 1.5 0 0116 5.622V10a6 6 0 00-6 6v4H3.5A1.5 1.5 0 012 18.5v-17A1.5 1.5 0 013.5 0h6.879zM5 5h8v2H5V5zm5 4H5v2h5V9zm-5 4h3v2H5v-2zm14.707 2.293A1 1 0 0019 15h-2v-2a1 1 0 00-2 0v2h-2a1 1 0 000 2h2v2a1 1 0 002 0v-2h2a1 1 0 00.707-1.707z"
+                          fill-rule="evenodd"></path>
+                      </svg> </span>
+                  </div>
+                  <span class="Polaris-Navigation__Text">Profiling</span>
+                </a>
+                <div class="Polaris-Navigation__SecondaryNavigation">
+                  <ul class="Polaris-Navigation__List">
+                    <li class="Polaris-Navigation__ListItem ">
+                      <a class="Polaris-TextStyle--variationSubdued Polaris-Navigation__Item"
+                        href="/integration/walmart/product-profile/index">Manage Profiles</a>
+                    </li>
+                    <li class="Polaris-Navigation__ListItem ">
+                      <a class="Polaris-TextStyle--variationSubdued Polaris-Navigation__Item"
+                        href="/integration/walmart/shippingtemplate/index">Shipping Templates</a>
+                    </li>
+                    <li class="Polaris-Navigation__ListItem ">
+                      <a class="Polaris-TextStyle--variationSubdued Polaris-Navigation__Item"
+                        href="/integration/walmart/walmart-templates/index">Other Templates</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="Polaris-Navigation__ListItem">
+                <a class="Polaris-Navigation__Item custom-list has-sibling ">
+                  <div class="Polaris-Navigation__Icon">
+                    <span class="Polaris-Icon">
+                      <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M10.293 1.293A1 1 0 0111 1h7a1 1 0 011 1v7a1 1 0 01-.293.707l-9 9a1 1 0 01-1.414 0l-7-7a1 1 0 010-1.414l9-9zM15.5 6a1.5 1.5 0 100-3 1.5 1.5 0 000 3z">
+                        </path>
+                      </svg> </span>
+                  </div>
+                  <span class="Polaris-Navigation__Text">Product</span>
+                </a>
+                <div class="Polaris-Navigation__SecondaryNavigation">
+                  <ul class="Polaris-Navigation__List">
+                    <li class="Polaris-Navigation__ListItem ">
+                      <a class="Polaris-TextStyle--variationSubdued Polaris-Navigation__Item" href="#">Manage
+                        Products</a>
+                    </li>
+                    <li class="Polaris-Navigation__ListItem ">
+                      <a class="Polaris-TextStyle--variationSubdued Polaris-Navigation__Item" href="#">Walmart Feeds</a>
+                    </li>
+                    <li class="Polaris-Navigation__ListItem ">
+                      <a class="Polaris-TextStyle--variationSubdued Polaris-Navigation__Item" href="#">Repricing</a>
+                    </li>
+                    <li class="Polaris-Navigation__ListItem ">
+                      <a class="Polaris-TextStyle--variationSubdued Polaris-Navigation__Item" href="#">Walmart
+                        Reports</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="Polaris-Navigation__ListItem">
+                <a class="Polaris-Navigation__Item position-relative custom-list has-sibling "
+                  href="/integration/walmart/import-product/index">
+                  <div class="Polaris-Navigation__Icon">
+                    <span class="Polaris-Icon">
+                      <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M13.707 10.707a.999.999 0 10-1.414-1.414L11 10.586V3a1 1 0 10-2 0v7.586L7.707 9.293a.999.999 0 10-1.414 1.414l3 3a.999.999 0 001.414 0l3-3zM3 16a1 1 0 100 2h14a1 1 0 100-2H3z">
+                        </path>
+                      </svg> </span>
+                  </div>
+                  <span class="Polaris-Navigation__Text">Import Shopify Products</span>
+                </a>
+              </li>
+              <li class="Polaris-Navigation__ListItem">
+                <a class="Polaris-Navigation__Item custom-list has-sibling ">
+                  <div class="Polaris-Navigation__Icon">
+                    <span class="Polaris-Icon">
+                      <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M11 1a1 1 0 10-2 0v7.586L7.707 7.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 8.586V1z">
+                        </path>
+                        <path
+                          d="M3 14V3h4V1H2.5A1.5 1.5 0 001 2.5v15A1.5 1.5 0 002.5 19h15a1.5 1.5 0 001.5-1.5v-15A1.5 1.5 0 0017.5 1H13v2h4v11h-3.5c-.775 0-1.388.662-1.926 1.244l-.11.12A1.994 1.994 0 0110 16a1.994 1.994 0 01-1.463-.637l-.111-.12C7.888 14.664 7.275 14 6.5 14H3z">
+                        </path>
+                      </svg> </span>
+                  </div>
+                  <span class="Polaris-Navigation__Text">Order</span>
+                </a>
+                <div class="Polaris-Navigation__SecondaryNavigation">
+                  <ul class="Polaris-Navigation__List">
+                    <li class="Polaris-Navigation__ListItem ">
+                      <a class="Polaris-TextStyle--variationSubdued Polaris-Navigation__Item"
+                        href="/integration/walmart/order/index">Sales Order</a>
+                    </li>
+                    <li class="Polaris-Navigation__ListItem ">
+                      <a class="Polaris-TextStyle--variationSubdued Polaris-Navigation__Item"
+                        href="/integration/walmart/failed-orders/index">Failed Order</a>
+                    </li>
+                    <li class="Polaris-Navigation__ListItem ">
+                      <a class="Polaris-TextStyle--variationSubdued Polaris-Navigation__Item"
+                        href="/integration/walmart/walmart-return/index">Return Order</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="Polaris-Navigation__ListItem">
+                <a class="Polaris-Navigation__Item custom-list has-sibling ">
+                  <div class="Polaris-Navigation__Icon">
+                    <span class="Polaris-Icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <path
+                          d="M5.293 2.293a.997.997 0 0 1 1.414 0l3 3a1 1 0 1 1-1.414 1.414L7 5.414V13a1 1 0 0 1-2 0V5.414L3.707 6.707a1 1 0 0 1-1.414-1.414l3-3zM13 7a1 1 0 0 1 2 0v7.585l1.293-1.292a.999.999 0 1 1 1.414 1.414l-3 3a.997.997 0 0 1-1.414 0l-3-3a.997.997 0 0 1 0-1.414.999.999 0 0 1 1.414 0L13 14.585V7z">
+                        </path>
+                      </svg> </span>
+                  </div>
+                  <span class="Polaris-Navigation__Text">Import Export</span>
+                </a>
+                <div class="Polaris-Navigation__SecondaryNavigation">
+                  <ul class="Polaris-Navigation__List">
+                    <li class="Polaris-Navigation__ListItem ">
+                      <a class="Polaris-TextStyle--variationSubdued Polaris-Navigation__Item"
+                        href="/integration/walmart/updatecsv/index">Product Update</a>
+                    </li>
+                    <li class="Polaris-Navigation__ListItem ">
+                      <a class="Polaris-TextStyle--variationSubdued Polaris-Navigation__Item" href=""></a>
+                    </li>
+                    <li class="Polaris-Navigation__ListItem ">
+                      <a class="Polaris-TextStyle--variationSubdued Polaris-Navigation__Item"
+                        href="/integration/walmart/product-retire-csv/index">Retire Product</a>
+                    </li>
+                    <li class="Polaris-Navigation__ListItem ">
+                      <a class="Polaris-TextStyle--variationSubdued Polaris-Navigation__Item"
+                        href="/integration/walmart/csv-upload/index">Upload Product</a>
+                    </li>
+                    <li class="Polaris-Navigation__ListItem ">
+                      <a class="Polaris-TextStyle--variationSubdued Polaris-Navigation__Item"
+                        href="/integration/walmart/export-xlsx/index">Recommended Attributes</a>
+                    </li>
+                    <li class="Polaris-Navigation__ListItem ">
+                      <a class="Polaris-TextStyle--variationSubdued Polaris-Navigation__Item"
+                        href="/integration/walmart/shippingtemplatemap/index">SKU Template Map</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="Polaris-Navigation__ListItem">
+                <a class="Polaris-Navigation__Item custom-list has-sibling ">
+                  <div class="Polaris-Navigation__Icon">
+                    <span class="Polaris-Icon">
+                      <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M17.1 14.95c.412.16.9-.08.9-.45v-13c0-.37-.488-.61-.9-.45-.683.41-1.311.83-1.919 1.237-2.14 1.43-4.019 2.687-7.084 2.713H4C2.34 5 1 6.34 1 8s1.34 3 3 3h4c3.123 0 5.02 1.268 7.182 2.714.607.406 1.236.826 1.918 1.236zM9 18h-.79c-.43 0-.81-.27-.94-.67L5.07 13H9a1 1 0 011 1v3c0 .55-.45 1-1 1z">
+                        </path>
+                      </svg> </span>
+                  </div>
+                  <span class="Polaris-Navigation__Text">Promotion</span>
+                </a>
+                <div class="Polaris-Navigation__SecondaryNavigation" style="display: none;">
+                  <ul class="Polaris-Navigation__List">
+                    <li class="Polaris-Navigation__ListItem ">
+                      <a class="Polaris-TextStyle--variationSubdued Polaris-Navigation__Item"
+                        href="/integration/walmart/walmart-promotion/index">Manage Promotion</a>
+                    </li>
+                    <li class="Polaris-Navigation__ListItem ">
+                      <a class="Polaris-TextStyle--variationSubdued Polaris-Navigation__Item"
+                        href="/integration/walmart/walmart-promotion/feed-list">Promotion Feed</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="Polaris-Navigation__ListItem">
+                <a class="Polaris-Navigation__Item position-relative custom-list has-sibling "
+                  href="/integration/walmart/activities/index">
+                  <div class="Polaris-Navigation__Icon">
+                    <span class="Polaris-Icon">
+                      <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                          d="M12.984 18a.999.999 0 01-.94-.658L8.967 8.888l-2.05 5.465a1.001 1.001 0 01-1.794.163L2.935 10.87l-1.124 1.685a1.002 1.002 0 01-1.665-1.11l2.001-3a.966.966 0 01.856-.444.998.998 0 01.834.485l1.936 3.223 2.271-6.059a1 1 0 01.938-.65h.005a1.001 1.001 0 01.935.658l2.948 8.1 3.154-11.033c.12-.42.502-.714.94-.724.43-.026.834.268.97.683l2.002 6a1 1 0 11-1.897.631l-.98-2.932-3.112 10.888a1 1 0 01-.928.726h-.035">
+                        </path>
+                      </svg> </span>
+                  </div>
+                  <span class="Polaris-Navigation__Text">Activities</span>
+                </a>
+              </li>
+              <li class="Polaris-Navigation__ListItem">
+                <a class="Polaris-Navigation__Item custom-list has-sibling ">
+                  <div class="Polaris-Navigation__Icon">
+                    <span class="Polaris-Icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <path
+                          d="M15.5 3A1.5 1.5 0 0014 4.5v12a1.5 1.5 0 001.5 1.5h1a1.5 1.5 0 001.5-1.5v-12A1.5 1.5 0 0016.5 3h-1zM8 8.5A1.5 1.5 0 019.5 7h1A1.5 1.5 0 0112 8.5v8a1.5 1.5 0 01-1.5 1.5h-1A1.5 1.5 0 018 16.5v-8zM2 12.5A1.5 1.5 0 013.5 11h1A1.5 1.5 0 016 12.5v4A1.5 1.5 0 014.5 18h-1A1.5 1.5 0 012 16.5v-4z">
+                        </path>
+                      </svg> </span>
+                  </div>
+                  <span class="Polaris-Navigation__Text">Analytics</span>
+                </a>
+                <div class="Polaris-Navigation__SecondaryNavigation" style="display: none;">
+                  <ul class="Polaris-Navigation__List">
+                    <li class="Polaris-Navigation__ListItem ">
+                      <a class="Polaris-TextStyle--variationSubdued Polaris-Navigation__Item"
+                        href="/integration/walmart/walmart-analytics/index">Listing Quality</a>
+                    </li>
+                    <li class="Polaris-Navigation__ListItem ">
+                      <a class="Polaris-TextStyle--variationSubdued Polaris-Navigation__Item"
+                        href="/integration/walmart/walmart-analytics/seller-analytics">Seller Analytics</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="Polaris-Navigation__ListItem">
+                <a class="Polaris-Navigation__Item position-relative custom-list has-sibling "
+                  href="/integration/walmart/setting/index">
+                  <div class="Polaris-Navigation__Icon">
+                    <span class="Polaris-Icon">
+                      <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                          d="M9.027 0a1 1 0 00-.99.859l-.37 2.598A6.993 6.993 0 005.742 4.57L3.305 3.59a1 1 0 00-1.239.428L.934 5.981a1 1 0 00.248 1.287l2.066 1.621a7.06 7.06 0 000 2.222l-2.066 1.621a1 1 0 00-.248 1.287l1.132 1.962a1 1 0 001.239.428l2.438-.979a6.995 6.995 0 001.923 1.113l.372 2.598a1 1 0 00.99.859h2.265a1 1 0 00.99-.859l.371-2.598a6.995 6.995 0 001.924-1.112l2.438.978a1 1 0 001.238-.428l1.133-1.962a1 1 0 00-.249-1.287l-2.065-1.621a7.063 7.063 0 000-2.222l2.065-1.621a1 1 0 00.249-1.287l-1.133-1.962a1 1 0 00-1.239-.428l-2.437.979a6.994 6.994 0 00-1.924-1.113L12.283.86a1 1 0 00-.99-.859H9.027zm1.133 13a3 3 0 100-6 3 3 0 000 6z">
+                        </path>
+                      </svg> </span>
+                  </div>
+                  <span class="Polaris-Navigation__Text">Settings</span>
+                </a>
+              </li>
+              <li class="Polaris-Navigation__ListItem">
+                <a class="Polaris-Navigation__Item custom-list has-sibling ">
+                  <div class="Polaris-Navigation__Icon">
+                    <span class="Polaris-Icon">
+                      <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M10 20C4.486 20 0 15.514 0 10S4.486 0 10 0s10 4.486 10 10-4.486 10-10 10zm1-15a1 1 0 10-2 0v.17A3 3 0 007 8c0 1.013.36 1.77 1.025 2.269.54.405 1.215.572 1.666.685l.066.016c.55.138.835.224 1.018.361.085.064.225.182.225.669a1 1 0 01-.984 1 1.611 1.611 0 01-.325-.074 2.533 2.533 0 01-.984-.633 1 1 0 00-1.414 1.414A4.548 4.548 0 009 14.804V15a1 1 0 102 0v-.17A3 3 0 0013 12c0-1.013-.36-1.77-1.025-2.269-.54-.405-1.215-.572-1.666-.685l-.066-.016c-.55-.138-.835-.224-1.018-.361C9.14 8.605 9 8.487 9 8a1 1 0 01.984-1 1.618 1.618 0 01.325.074c.245.081.606.255.984.633a1 1 0 101.414-1.414A4.547 4.547 0 0011 5.196V5z">
+                        </path>
+                      </svg> </span>
+                  </div>
+                  <span class="Polaris-Navigation__Text">Pricing Plan</span>
+                  <div class="Polaris-Navigation__Badge mt-5"> <span
+                      class="Polaris-Badge Polaris-Badge--statusInfo"><span
+                        class="Polaris-Badge__Content">NEW</span></span>
+                  </div>
+                </a>
+                <div class="Polaris-Navigation__SecondaryNavigation" style="display: none;">
+                  <ul class="Polaris-Navigation__List">
+                    <li class="Polaris-Navigation__ListItem ">
+                      <a class="Polaris-TextStyle--variationSubdued Polaris-Navigation__Item"
+                        href="/integration/walmart/payment/index">App Plan</a>
+                    </li>
+                    <li class="Polaris-Navigation__ListItem ">
+                      <a class="Polaris-TextStyle--variationSubdued Polaris-Navigation__Item"
+                        href="/integration/walmart/payment/booster-plan">Add-Ons Plan</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+
+
+
+            <ul class="Polaris-Navigation__Section Polaris-Navigation__Section--withSeparator">
+              <li class="Polaris-Navigation__SectionHeading">
+                <span class="Polaris-Navigation__Text">Support</span>
+                <button type="button" class="Polaris-Navigation__Action" aria-label="Add sales channel">
+                </button>
+              </li>
+              <li class="Polaris-Navigation__ListItem">
+                <a class="Polaris-Navigation__Item custom-list has-sibling ">
+                  <div class="Polaris-Navigation__Icon">
+                    <span class="Polaris-Icon">
+                      <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                          d="M0 10C0 4.478 4.478 0 10 0c5.523 0 10 4.478 10 10 0 5.523-4.477 10-10 10-5.522 0-10-4.477-10-10zm11.125 2.002H8.989v-.141c.01-1.966.492-2.254 1.374-2.782.093-.056.19-.114.293-.178.73-.459 1.292-1.038 1.292-1.883 0-.948-.743-1.564-1.666-1.564-.851 0-1.657.398-1.712 1.533H6.304C6.364 4.693 8.18 3.5 10.294 3.5c2.306 0 3.894 1.447 3.894 3.488 0 1.382-.695 2.288-1.805 2.952l-.238.144c-.79.475-1.009.607-1.02 1.777V12zm.17 3.012a1.344 1.344 0 01-1.327 1.328 1.32 1.32 0 01-1.328-1.328 1.318 1.318 0 011.328-1.316c.712 0 1.322.592 1.328 1.316z">
+                        </path>
+                      </svg> </span>
+                  </div>
+                  <span class="Polaris-Navigation__Text">Help</span>
+                </a>
+                <div class="Polaris-Navigation__SecondaryNavigation">
+                  <ul class="Polaris-Navigation__List">
+                    <li class="Polaris-Navigation__ListItem ">
+                      <a class="Polaris-TextStyle--variationSubdued Polaris-Navigation__Item"
+                        href="/integration/walmart/help/index">Knowledge Base</a>
+                    </li>
+                    <li class="Polaris-Navigation__ListItem ">
+                      <a class="Polaris-TextStyle--variationSubdued Polaris-Navigation__Item"
+                        href="https://docs.cedcommerce.com/cedcommerce/walmart-shopify-integration-guide//"
+                        target="_blank">Documentation</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="Polaris-Navigation__ListItem">
+                <a class="Polaris-Navigation__Item position-relative custom-list has-sibling "
+                  href="/integration/walmart/site/contact-us">
+                  <div class="Polaris-Navigation__Icon">
+                    <span class="Polaris-Icon">
+                      <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M7.876 6.976l-.534-2.67A1.5 1.5 0 005.871 3.1H2.638c-.86 0-1.576.727-1.537 1.586.461 10.161 5.499 14.025 14.415 14.413.859.037 1.584-.676 1.584-1.535v-3.235a1.5 1.5 0 00-1.206-1.471l-2.67-.534a1.5 1.5 0 00-1.636.8l-.488.975c-2 0-5-3-5-5l.975-.488c.606-.302.934-.972.801-1.635z">
+                        </path>
+                      </svg> </span>
+                  </div>
+
+                  <span class="Polaris-Navigation__Text">Contact Us</span>
+                </a>
+              </li>
+              <li class="Polaris-Navigation__ListItem">
+                <a class="Polaris-Navigation__Item position-relative custom-list has-sibling "
+                  href="https://calendly.com/cedcomemrce-walmart-integration-helpdesk/15min" target="_blank">
+                  <div class="Polaris-Navigation__Icon">
+                    <span class="Polaris-Icon">
+                      <svg width="20" height="20" viewBox="0 0 20 20" class="" focusable="false" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                          d="M19 2h-3V1a1 1 0 1 0-2 0v1H6V1a1 1 0 1 0-2 0v1H1a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1zM2 18h16V8H2v10zM2 6h16V4H2v2zm4 4a1 1 0 1 0 0 2 1 1 0 1 0 0-2m0 4a1 1 0 1 0 0 2 1 1 0 1 0 0-2m4 0a1 1 0 1 0 0 2 1 1 0 1 0 0-2m0-4a1 1 0 1 0 0 2 1 1 0 1 0 0-2m4 0a1 1 0 1 0 0 2 1 1 0 1 0 0-2">
+                        </path>
+                      </svg> </span>
+                  </div>
+
+                  <span class="Polaris-Navigation__Text">Schedule a Meeting</span>
+                </a>
+              </li>
+            </ul>
+
+
+            <!-- ========================= sticky header ===============================-->
+
+            <div class="sticky-header"></div>
+
+            <!-- ========================= sticky header end ===============================-->
+
+
+
+            <script type="text/javascript">
+              $(document).ready(function ($) {
+
+                /*open sidebar menus*/
+
+                $('button.Polaris-Navigation__Item').on('click', function () {
+
+                  if ($(this).hasClass('Polaris-Navigation__Item--selected')) {
+
+                    $('.Polaris-Navigation__Item').removeClass('Polaris-Navigation__Item--selected');
+
+                    $(this).addClass('Polaris-Navigation__Item--selected');
+
+                    $(this).siblings('.Polaris-Navigation__SecondaryNavigation').slideDown(300);
+
+                  } else {
+
+                    $('.Polaris-Navigation__Item').removeClass('Polaris-Navigation__Item--selected');
+
+                    $(this).addClass('Polaris-Navigation__Item--selected');
+
+                    $('.Polaris-Navigation__SecondaryNavigation').slideUp(300);
+
+                    $(this).siblings('.Polaris-Navigation__SecondaryNavigation').slideDown(300);
+
+                  }
+
+                });
+
+                /*togle user name dropdown*/
+
+                // $(document).on('click', '.open-popover', function (e) {
+
+                //     e.stopPropagation();
+
+                //     $(this).siblings('.Polaris-Popover__Wrapper').fadeToggle(100);
+
+                // })
+
+                // $(document).on('click', function () {
+
+                //     $('#topbar-user-menu').fadeOut(100);
+
+                // })
+
+              });
+            </script>
+          </div>
+        </nav>
+        <a href="#" class="Polaris-Frame__NavigationDismiss active">
+          <span class="Polaris-Icon Polaris-Icon--colorWhite">
+            <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true">
+              <path
+                d="M11.414 10l6.293-6.293a.999.999 0 1 0-1.414-1.414L10 8.586 3.707 2.293a.999.999 0 1 0-1.414 1.414L8.586 10l-6.293 6.293a.999.999 0 1 0 1.414 1.414L10 11.414l6.293 6.293a.997.997 0 0 0 1.414 0 .999.999 0 0 0 0-1.414L11.414 10z"
+                fill-rule="evenodd"></path>
+            </svg>
+          </span>
+        </a>
+      </div>
+      <div class="Polaris-Frame__ContextualSaveBar Polaris-Frame-CSSAnimation--startFade">
+      </div>
+      <main class="Polaris-Frame__Main" id="AppFrameMain" data-has-global-ribbon="false">
+        <div class="Polaris-Frame__Content">
+          <div class="Polaris-Page Polaris-Page--fullWidth">
+            <style>
+              .daterange-btn:focus {
+                border-color: unset;
+                box-shadow: unset;
+              }
+            </style>
+            <!--Dashboard heading section-->
+            <div class="Polaris-Page-Header">
+              <div class="Polaris-Page-Header__MainContent">
+                <div class="Polaris-Page-Header__TitleActionMenuWrapper">
+                  <div>
+                    <div class="Polaris-Header-Title__TitleAndSubtitleWrapper">
+                      <div class="Polaris-Header-Title__TitleAndSubtitleWrapper">
+                        <div class="Polaris-Header-Title">
+                          <h1 class="Polaris-DisplayText Polaris-DisplayText--sizeLarge">
+                            Welcome Shweta Singh,
+                          </h1>
+                        </div>
+                        <div class="Polaris-Header-Title__SubTitle">
+                          <div class="Polaris-Stack Polaris-Stack--spacingNone">
+                            <div class="Polaris-Stack__Item">
+                              Check out the recent progress in your store.
+                            </div>
+                            <div class="Polaris-Stack__Item refresh-button c-pointer" data-toggle="tooltip" title=""
+                              data-original-title="Refresh">
+                              <span class="Polaris-Badge Polaris-Badge">
+                                <span class="Polaris-VisuallyHidden"></span>
+                                Last Refresh : 2 minutes ago <svg class=""
+                                  meta-href="/integration/walmart/dashboard/deletecache"
+                                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" fill="none" height="20"
+                                  width="20">
+                                  <circle cx="25" cy="25" r="25" fill="#dfe3e8"></circle>
+                                  <path d="M14 17V23H20" stroke="#5C6ACC" stroke-width="3" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                  <path d="M36 33V27H30" stroke="#5C6ACC" stroke-width="3" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                  <path
+                                    d="M33.49 22C32.9828 20.5668 32.1209 19.2854 30.9845 18.2754C29.8482 17.2654 28.4745 16.5598 26.9917 16.2243C25.5089 15.8888 23.9652 15.9344 22.5048 16.3568C21.0444 16.7792 19.7147 17.5647 18.64 18.64L14 23M36 27L31.36 31.36C30.2853 32.4353 28.9556 33.2208 27.4952 33.6432C26.0348 34.0657 24.4911 34.1113 23.0083 33.7758C21.5255 33.4402 20.1518 32.7346 19.0155 31.7246C17.8791 30.7146 17.0172 29.4332 16.51 28"
+                                    stroke="#5C6ACC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                  </path>
+                                </svg>
+                              </span>
+                            </div>
+                            <div class="Polaris-Stack__Item ">
+                              <p></p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button title="Stats Analysis" type="button" class="Polaris-Button stats-btn daterange-btn"
+                    style="display: none" onclick="rightTabFlyer();">
+                    <span class="Polaris-Button__Content"><svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20">
+                        <path fill="#637381"
+                          d="M19 18a1 1 0 0 1 0 2H1a1 1 0 0 1 0-2h18zm0-18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1h5V5a1 1 0 0 1 1-1h5V1a1 1 0 0 1 1-1h6zm-5 14h4V2h-4v12zm-6 0h4V6H8v8zm-6 0h4v-4H2v4z">
+                        </path>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="Polaris-Page__Content">
+              <div class="Polaris-Layout">
+
+                <div class="Polaris-Layout__Section">
+                  <!-- Review section start -->
+                  <div class="custom-message-wrap mb-20">
+                    <div
+                      class="Polaris-Banner Polaris-Banner--statusInfo Polaris-Banner--hasDismiss Polaris-Banner--withinPage p-10">
+                      <div class="Polaris-Banner__Ribbon">
+                        <span
+                          class="Polaris-Icon Polaris-Icon--colorTealDark Polaris-Icon--isColored Polaris-Icon--hasBackdrop"><svg
+                            viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true">
+                            <path fill-rule="evenodd"
+                              d="M10 20c5.514 0 10-4.486 10-10S15.514 0 10 0 0 4.486 0 10s4.486 10 10 10zm1-6a1 1 0 1 1-2 0v-4a1 1 0 1 1 2 0v4zm-1-9a1 1 0 1 0 0 2 1 1 0 0 0 0-2z">
+                            </path>
+                          </svg></span>
+                      </div>
+                      <div class="flex-grow-1 pr-35">
+                        <div class="Polaris-Banner__Content" id="Banner7Content">
+                          <div class="Polaris-Stack Polaris-Stack--distributionFillEvenly">
+                            <div class="Polaris-Stack__Item">
+                              <p> Rate the performance of the app and our services! </p>
+                            </div>
+                            <div class="Polaris-Stack__Item pl-15">
+                              <div class="rating-container">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Review section end -->
+                  <!--   To Do Card Starts -->
+                  <!-- tab section -->
+
+                  <div id="confirm-upload-products"></div>
+                  <!-- tab end -->
+
+                  <script type="text/javascript">
+                    function confirmUpload(action_name, action_link) {
+                      var defaultArray = {
+                        modal_heading: 'Upload Product',
+                        modal_message: 'Are you sure want to upload all the products ?',
+                        close_button_text: 'Cancel',
+                        confirm_button_onclick: "uploadProducts('" + action_name + "', '" + action_link + "')",
+                        confirm_button_text: 'Yes'
+                      };
+                      confirmation(this, 0, defaultArray, "#confirm-upload-products");
+                      addRemoveBodyClass(1);
+                    }
+
+                    function uploadProducts(action, url) {
+                      window.location.assign(url);
+                    }
+                  </script> <!--   To Do Card End    -->
+
+
+                  <!--OrderSales analytics Starts-->
+                  <!--OrderSales analytics ends-->
+
+
+                  <!--Webhook Error list-->
+                  <div class="Polaris-Card mt-20">
+                    <div class="Polaris-Card__Header">
+                      <div class="Polaris-Stack Polaris-Stack--alignmentBaseline">
+                        <div class="Polaris-Stack__Item Polaris-Stack__Item--fill">
+                          <h2 class="Polaris-Heading">To-Do</h2>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="Polaris-Card__Section">
+                      <div class="Polaris-ResourceList__ResourceListWrapper">
+                        <ul class="Polaris-ResourceList" aria-live="polite">
+                          <li class="Polaris-ResourceList__ItemWrapper">
+                            <div class="Polaris-ResourceItem"
+                              data-href="/integration/walmart/error-notification/index?ErrorNotificationSearch[error_type]=product_delete">
+                              <a class="Polaris-ResourceItem__Link py-5"
+                                href="/integration/walmart/error-notification/index?ErrorNotificationSearch[error_type]=product_delete"></a>
+                              <div class="Polaris-ResourceItem__Container" id="product_delete">
+                                <div class="Polaris-ResourceItem__Owned">
+                                  <div class="Polaris-ResourceItem__Media mr-10">
+                                    <span role="img"
+                                      class="Polaris-Avatar Polaris-Avatar--sizeMedium Polaris-Avatar--hasImage">
+                                      <svg class="Polaris-Avatar__Image" width="40" height="40" viewBox="0 0 40 40"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="40" height="40" fill="#EEEEEE"></rect>
+                                        <path
+                                          d="M27 12H24V10H22V12H18V10H16V12H13C11.897 12 11 12.897 11 14V28C11 29.103 11.897 30 13 30H27C28.103 30 29 29.103 29 28V14C29 12.897 28.103 12 27 12ZM13 28V15H27V14L27.002 28H13Z"
+                                          fill="#9C6ADE"></path>
+                                        <path d="M15 17H25V19H15V17ZM15 21H20V23H15V21Z" fill="#9C6ADE"></path>
+                                      </svg> </span>
+                                  </div>
+                                </div>
+                                <div class="Polaris-ResourceItem__Content">
+                                  <div class="Polaris-Stack Polaris-Stack--noWrap">
+                                    <div class="Polaris-Stack__Item Polaris-Stack__Item--fill">
+                                      <p>
+                                        <strong>
+                                          1</strong> SKU(s) didn't get retire from Walmart.com
+                                      </p>
+                                    </div>
+                                    <div class="Polaris-Stack__Item">
+                                      <svg width="9" height="14" viewBox="0 0 9 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.73755 13L7.73755 7L1.73755 1" stroke="#CFD6DC" stroke-width="2"
+                                          stroke-linecap="round" stroke-linejoin="round">
+                                        </path>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="Polaris-ResourceList__ItemWrapper">
+                            <div class="Polaris-ResourceItem"
+                              data-href="/integration/walmart/error-notification/index?ErrorNotificationSearch[error_type]=inventory">
+                              <a class="Polaris-ResourceItem__Link py-5"
+                                href="/integration/walmart/error-notification/index?ErrorNotificationSearch[error_type]=inventory"></a>
+                              <div class="Polaris-ResourceItem__Container" id="inventory">
+                                <div class="Polaris-ResourceItem__Owned">
+                                  <div class="Polaris-ResourceItem__Media mr-10">
+                                    <span role="img"
+                                      class="Polaris-Avatar Polaris-Avatar--sizeMedium Polaris-Avatar--hasImage">
+                                      <svg class="Polaris-Avatar__Image" width="40" height="40" viewBox="0 0 40 40"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="40" height="40" fill="#EEEEEE"></rect>
+                                        <path
+                                          d="M27 12H24V10H22V12H18V10H16V12H13C11.897 12 11 12.897 11 14V28C11 29.103 11.897 30 13 30H27C28.103 30 29 29.103 29 28V14C29 12.897 28.103 12 27 12ZM13 28V15H27V14L27.002 28H13Z"
+                                          fill="#9C6ADE"></path>
+                                        <path d="M15 17H25V19H15V17ZM15 21H20V23H15V21Z" fill="#9C6ADE"></path>
+                                      </svg> </span>
+                                  </div>
+                                </div>
+                                <div class="Polaris-ResourceItem__Content">
+                                  <div class="Polaris-Stack Polaris-Stack--noWrap">
+                                    <div class="Polaris-Stack__Item Polaris-Stack__Item--fill">
+                                      <p>
+                                        <strong>
+                                          33</strong> SKU(s) inventory didn't get updated on Walmart.com
+                                      </p>
+                                    </div>
+                                    <div class="Polaris-Stack__Item">
+                                      <svg width="9" height="14" viewBox="0 0 9 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.73755 13L7.73755 7L1.73755 1" stroke="#CFD6DC" stroke-width="2"
+                                          stroke-linecap="round" stroke-linejoin="round">
+                                        </path>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Halloween  Card -->
+                  <!-- <div class="Polaris-Card">
+                <div class="Polaris-MediaCard">
+                    <div class="Polaris-MediaCard__MediaContainer"><a target="_blank"
+                                                                      href="https://bit.ly/37e6qrZ"><img
+                                    alt="" width="100%" height="100%"
+                                    src=""
+                                    style="object-fit: cover; object-position: center center;"></a></div>
+                    <div class="Polaris-MediaCard__InfoContainer">
+                        <div class="Polaris-Card__Section">
+                            <div class="Polaris-MediaCard__Popover">
+                                <div>
+
+                                </div>
+                            </div>
+                            <div class="Polaris-Stack Polaris-Stack--vertical Polaris-Stack--spacingTight">
+                                <div class="Polaris-Stack__Item">
+                                    <div class="Polaris-MediaCard__Heading">
+                                        <h2 class="Polaris-Heading fs-17">Black Friday Cyber Monday Offer!
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="Polaris-Stack__Item">
+                                    <p class="fs-14">Get upto <strong> 20% OFF </strong> on Standard and Premium Annual
+                                        plans and upto <strong>25% OFF </strong> on Pro Monthly and Annual Plans.</p>
+                                    <p>The offer is active from <strong>Nov 22, 2021 to Dec 5, 2021.</strong>
+
+                                    </p><br>
+                                    <p class="fs-14"><strong>HURRY UP</strong>, grab this amazing offer NOW!
+                                        <strong><a target="_blank" href="">Click
+                                                Here</a> </strong> to check the discounted plans.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+                  <!--Walmart blog link-->
+
+
+                  <!-- Stock Error -->
+                  <div class="Polaris-Card">
+                    <div class="Polaris-Card__Header">
+                      <div class="Polaris-Stack Polaris-Stack--alignmentBaseline">
+                        <div class="Polaris-Stack__Item Polaris-Stack__Item--fill">
+                          <h2 class="Polaris-Heading">Low Stock Items</h2>
+                        </div>
+                        <div class="Polaris-Stack__Item">
+                          <div class="Polaris-ButtonGroup">
+                            <div class="Polaris-ButtonGroup__Item Polaris-ButtonGroup__Item--plain"><a target="_blank"
+                                href="/integration/walmart/product/index?low=2"
+                                class="Polaris-Button Polaris-Button--plain daterange-btn"><span
+                                  class="Polaris-Button__Content"><span class="Polaris-Button__Text">All
+                                    Items</span></span></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="Polaris-Card__Section">
+                      <div class="Polaris-ResourceList__ResourceListWrapper">
+                        <ul class="Polaris-ResourceList" aria-live="polite">
+
+                          <li class="Polaris-ResourceList__ItemWrapper">
+                            <div class="Polaris-ResourceItem"
+                              data-href="/integration/walmart/product/index?WalmartProductSearch[product_title]=3%2F4+Sleeve+Kimono+Dress&amp;WalmartProductSearch[inventory_to]=2">
+                              <a class="Polaris-ResourceItem__Link py-5"
+                                href="/integration/walmart/product/index?WalmartProductSearch[product_title]=3%2F4+Sleeve+Kimono+Dress&amp;WalmartProductSearch[inventory_to]=2"></a>
+                              <div class="Polaris-ResourceItem__Container" id="0">
+                                <div class="Polaris-ResourceItem__Owned">
+                                  <div class="Polaris-ResourceItem__Media mr-10">
+                                    <span aria-label="Yi So-Yeon" role="img"
+                                      class="Polaris-Avatar Polaris-Avatar--sizeMedium Polaris-Avatar--hasImage">
+                                      <img
+                                        src="https://cdn.shopify.com/s/files/1/0557/5419/4989/products/2015-03-20_Ashley_Look_20_23515_15565_small.jpg?v=1644842888"
+                                        class="Polaris-Avatar__Image"
+                                        alt="https://cdn.shopify.com/s/files/1/0557/5419/4989/products/2015-03-20_Ashley_Look_20_23515_15565_small.jpg?v=1644842888">
+                                    </span>
+                                  </div>
+                                </div>
+                                <div class="Polaris-ResourceItem__Content">
+                                  <div class="Polaris-Stack Polaris-Stack--noWrap Polaris-Stack--alignmentCenter">
+                                    <div class="Polaris-Stack__Item Polaris-Stack__Item--fill">
+                                      <p>
+                                        3/4 Sleeve Kimono Dress </p>
+                                    </div>
+                                    <div class="Polaris-Stack__Item">
+                                      <span class="Polaris-TextStyle--variationNegative">
+                                        <strong>2</strong>
+                                        items
+                                        left
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="Polaris-ResourceList__ItemWrapper">
+                            <div class="Polaris-ResourceItem"
+                              data-href="/integration/walmart/product/index?WalmartProductSearch[product_title]=5+Pocket+Jean&amp;WalmartProductSearch[inventory_to]=2">
+                              <a class="Polaris-ResourceItem__Link py-5"
+                                href="/integration/walmart/product/index?WalmartProductSearch[product_title]=5+Pocket+Jean&amp;WalmartProductSearch[inventory_to]=2"></a>
+                              <div class="Polaris-ResourceItem__Container" id="1">
+                                <div class="Polaris-ResourceItem__Owned">
+                                  <div class="Polaris-ResourceItem__Media mr-10">
+                                    <span aria-label="Yi So-Yeon" role="img"
+                                      class="Polaris-Avatar Polaris-Avatar--sizeMedium Polaris-Avatar--hasImage">
+                                      <img
+                                        src="https://cdn.shopify.com/s/files/1/0557/5419/4989/products/2015-04-03_Jake_Look_08_32020_18028_small.jpg?v=1644842362"
+                                        class="Polaris-Avatar__Image"
+                                        alt="https://cdn.shopify.com/s/files/1/0557/5419/4989/products/2015-04-03_Jake_Look_08_32020_18028_small.jpg?v=1644842362">
+                                    </span>
+                                  </div>
+                                </div>
+                                <div class="Polaris-ResourceItem__Content">
+                                  <div class="Polaris-Stack Polaris-Stack--noWrap Polaris-Stack--alignmentCenter">
+                                    <div class="Polaris-Stack__Item Polaris-Stack__Item--fill">
+                                      <p>
+                                        5 Pocket Jean </p>
+                                    </div>
+                                    <div class="Polaris-Stack__Item">
+                                      <span class="Polaris-TextStyle--variationNegative">
+                                        <strong>2</strong>
+                                        items
+                                        left
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="Polaris-ResourceList__ItemWrapper">
+                            <div class="Polaris-ResourceItem"
+                              data-href="/integration/walmart/product/index?WalmartProductSearch[product_title]=A-Line+Jacket&amp;WalmartProductSearch[inventory_to]=2">
+                              <a class="Polaris-ResourceItem__Link py-5"
+                                href="/integration/walmart/product/index?WalmartProductSearch[product_title]=A-Line+Jacket&amp;WalmartProductSearch[inventory_to]=2"></a>
+                              <div class="Polaris-ResourceItem__Container" id="2">
+                                <div class="Polaris-ResourceItem__Owned">
+                                  <div class="Polaris-ResourceItem__Media mr-10">
+                                    <span aria-label="Yi So-Yeon" role="img"
+                                      class="Polaris-Avatar Polaris-Avatar--sizeMedium Polaris-Avatar--hasImage">
+                                      <img
+                                        src="https://cdn.shopify.com/s/files/1/0557/5419/4989/products/2015-02-26_Ashley_Look_28_20557_7133_small.jpg?v=1644840379"
+                                        class="Polaris-Avatar__Image"
+                                        alt="https://cdn.shopify.com/s/files/1/0557/5419/4989/products/2015-02-26_Ashley_Look_28_20557_7133_small.jpg?v=1644840379">
+                                    </span>
+                                  </div>
+                                </div>
+                                <div class="Polaris-ResourceItem__Content">
+                                  <div class="Polaris-Stack Polaris-Stack--noWrap Polaris-Stack--alignmentCenter">
+                                    <div class="Polaris-Stack__Item Polaris-Stack__Item--fill">
+                                      <p>
+                                        A-Line Jacket </p>
+                                    </div>
+                                    <div class="Polaris-Stack__Item">
+                                      <span class="Polaris-TextStyle--variationNegative">
+                                        <strong>2</strong>
+                                        items
+                                        left
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--Top selling products-->
+
+
+                  <!--Latest updates section-->
+                  <div style="display: none" class="Polaris-Card show-tab">
+                    <div class="Polaris-Card__Header">
+                      <div class="Polaris-Stack Polaris-Stack--alignmentBaseline">
+                        <div class="Polaris-Stack__Item Polaris-Stack__Item--fill">
+                          <h2 class="Polaris-Heading">Announcements</h2>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="Polaris-Card__Section">
+                      <div class="Polaris-ResourceList__ResourceListWrapper">
+                        <ul class="Polaris-ResourceList" aria-live="polite">
+
+                          <li class="Polaris-ResourceList__ItemWrapper">
+                            <div class="Polaris-ResourceItem">
+                              <a href="/integration/walmart/latest-updates/view?id=30" target="_blank"
+                                class="Polaris-ResourceItem__Link py-5"></a>
+                              <div class="Polaris-ResourceItem__Container">
+                                <div class="Polaris-ResourceItem__Owned">
+                                  <div class="Polaris-ResourceItem__Media mr-10">
+                                    <span aria-label="Yi So-Yeon" role="img"
+                                      class="Polaris-Avatar Polaris-Avatar--sizeMedium Polaris-Avatar--hasImage">
+                                      <svg class="Polaris-Avatar__Image" width="40" height="40" viewBox="0 0 40 40"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="40" height="40" fill="#EEEEEE"></rect>
+                                        <g clip-path="url(#clip0)">
+                                          <path
+                                            d="M28.8885 19.644C26.4064 19.3449 23.4949 20.1021 21.5263 20.8923L18.9768 16.4764C20.6954 15.2532 22.7564 13.0229 23.7385 10.7239L28.8885 19.644V19.644ZM22.7942 27.0885L21.626 27.763L17.8497 25.3244L20.7942 23.6244L22.7942 27.0885ZM19.7942 21.8923L15.8971 24.1423C14.6847 24.8423 13.1826 24.4405 12.4821 23.2272C11.7821 22.0148 12.1847 20.5122 13.3971 19.8122L17.2942 17.5622L19.7942 21.8923ZM22.4545 6.5C22.0215 6.75 21.8385 7.43301 22.0885 7.86603C23.0885 9.59808 19.6717 13.8801 17.1603 15.3301L12.3971 18.0801C10.2321 19.3301 9.5 22.0622 10.75 24.2272C11.8 26.0459 13.8624 26.8181 15.7579 26.3012L20.4229 29.3813C21.0328 29.8375 21.889 29.9205 22.5818 29.5205L23.7942 28.8205C24.7469 28.2705 25.0763 27.0411 24.5263 26.0885L22.5763 22.711C25.3249 21.4716 29.689 21.0305 30.5885 22.5885C30.8385 23.0215 31.5215 23.2045 31.9545 22.9545C32.3875 22.7045 32.5705 22.0215 32.3205 21.5885L23.8205 6.86603C23.5705 6.43301 22.8875 6.25 22.4545 6.5Z"
+                                            fill="#9C6ADE"></path>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0">
+                                            <rect x="6" y="16" width="20" height="20" transform="rotate(-30 6 16)"
+                                              fill="white"></rect>
+                                          </clipPath>
+                                        </defs>
+                                      </svg>
+                                    </span>
+                                  </div>
+                                </div>
+                                <div class="Polaris-ResourceItem__Content">
+                                  <p class="set-ellipsis max-w-200"> </p>
+                                  <p>Looking to purchase barcode for your products?</p>
+                                  <p></p>
+                                  <p class="Polaris-TextStyle--variationSubdued"> 1 years 8 months ago </p>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Trending apps -->
+                  <div class="Polaris-Card">
+                    <div class="Polaris-Card__Header">
+                      <div class="Polaris-Stack Polaris-Stack--noWrap Polaris-Stack--alignmentBaseline">
+                        <div class="Polaris-Stack__Item Polaris-Stack__Item--fill">
+                          <h2 class="Polaris-Heading">Trending Integration Apps</h2>
+                        </div>
+                        <div class="Polaris-Stack__Item">
+                          <div class="Polaris-ButtonGroup">
+                            <div class="Polaris-ButtonGroup__Item Polaris-ButtonGroup__Item--plain">
+                              <a href="https://apps.shopify.com/partners/cedcommerce" target="_blank"
+                                class="Polaris-Button Polaris-Button--plain daterange-btn">
+                                <span class="Polaris-Button__Content"><span class="Polaris-Button__Text">All
+                                    Apps</span></span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="Polaris-Card__Section">
+                      <div class="Polaris-ResourceList__ResourceListWrapper">
+                        <ul class="Polaris-ResourceList" aria-live="polite">
+
+                          <li class="Polaris-ResourceList__ItemWrapper">
+                            <div class="Polaris-ResourceItem">
+                              <a class="Polaris-ResourceItem__Link py-5"
+                                href="https://apps.shopify.com/facebook-marketplace-connector?surface_detail=cedcommerce&amp;surface_inter_position=1&amp;surface_intra_position=9&amp;surface_type=search"
+                                target="_blank"></a>
+                              <div class="Polaris-ResourceItem__Container">
+                                <div class="Polaris-ResourceItem__Owned">
+                                  <div class="Polaris-ResourceItem__Media mr-10">
+                                    <span aria-label="Yi So-Yeon" role="img"
+                                      class="Polaris-Avatar Polaris-Avatar--sizeMedium Polaris-Avatar--hasImage">
+                                      <img class="Polaris-Avatar__Image"
+                                        src="/integration/static/modules/walmart/assets/images/facebook.png"
+                                        alt="Facebook Marketplace Connector"> </span>
+                                  </div>
+                                </div>
+                                <div class="Polaris-ResourceItem__Content">
+                                  <div class="Polaris-Stack Polaris-Stack--noWrap Polaris-Stack--alignmentCenter">
+                                    <div class="Polaris-Stack__Item Polaris-Stack__Item--fill">
+                                      <p>
+                                        Facebook Marketplace Connector </p>
+                                      <span class="Polaris-TextStyle--variationSubdued">Sell on Facebook, list
+                                        your products and manage orders.</span>
+                                    </div>
+                                    <div class="Polaris-Stack__Item">
+                                      <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                          d="M5.50001 0.833374L6.78751 3.44171L9.66668 3.86254L7.58334 5.89171L8.07501 8.75837L5.50001 7.40421L2.92501 8.75837L3.41668 5.89171L1.33334 3.86254L4.21251 3.44171L5.50001 0.833374Z"
+                                          fill="#FFA450" stroke="#FFA450" stroke-linecap="round"
+                                          stroke-linejoin="round"></path>
+                                      </svg>
+
+                                      <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                          d="M5.50001 0.833374L6.78751 3.44171L9.66668 3.86254L7.58334 5.89171L8.07501 8.75837L5.50001 7.40421L2.92501 8.75837L3.41668 5.89171L1.33334 3.86254L4.21251 3.44171L5.50001 0.833374Z"
+                                          fill="#FFA450" stroke="#FFA450" stroke-linecap="round"
+                                          stroke-linejoin="round"></path>
+                                      </svg>
+
+                                      <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                          d="M5.50001 0.833374L6.78751 3.44171L9.66668 3.86254L7.58334 5.89171L8.07501 8.75837L5.50001 7.40421L2.92501 8.75837L3.41668 5.89171L1.33334 3.86254L4.21251 3.44171L5.50001 0.833374Z"
+                                          fill="#FFA450" stroke="#FFA450" stroke-linecap="round"
+                                          stroke-linejoin="round"></path>
+                                      </svg>
+
+                                      <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                          d="M5.50001 0.833374L6.78751 3.44171L9.66668 3.86254L7.58334 5.89171L8.07501 8.75837L5.50001 7.40421L2.92501 8.75837L3.41668 5.89171L1.33334 3.86254L4.21251 3.44171L5.50001 0.833374Z"
+                                          fill="#FFA450" stroke="#FFA450" stroke-linecap="round"
+                                          stroke-linejoin="round"></path>
+                                      </svg>
+
+                                      <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                          d="M5.50001 0.833374L6.78751 3.44171L9.66668 3.86254L7.58334 5.89171L8.07501 8.75837L5.50001 7.40421L2.92501 8.75837L3.41668 5.89171L1.33334 3.86254L4.21251 3.44171L5.50001 0.833374Z"
+                                          fill="#FFA450" stroke="#FFA450" stroke-linecap="round"
+                                          stroke-linejoin="round"></path>
+                                      </svg>
+
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="Polaris-ResourceList__ItemWrapper">
+                            <div class="Polaris-ResourceItem">
+                              <a class="Polaris-ResourceItem__Link py-5"
+                                href="https://apps.shopify.com/google-express-integration?surface_detail=shopping+feed&amp;surface_inter_position=1&amp;surface_intra_position=4&amp;surface_type=search"
+                                target="_blank"></a>
+                              <div class="Polaris-ResourceItem__Container">
+                                <div class="Polaris-ResourceItem__Owned">
+                                  <div class="Polaris-ResourceItem__Media mr-10">
+                                    <span aria-label="Yi So-Yeon" role="img"
+                                      class="Polaris-Avatar Polaris-Avatar--sizeMedium Polaris-Avatar--hasImage">
+                                      <img class="Polaris-Avatar__Image"
+                                        src="/integration/static/modules/walmart/assets/images/shopping_feed.png"
+                                        alt="Shopping Feed For Google"> </span>
+                                  </div>
+                                </div>
+                                <div class="Polaris-ResourceItem__Content">
+                                  <div class="Polaris-Stack Polaris-Stack--noWrap Polaris-Stack--alignmentCenter">
+                                    <div class="Polaris-Stack__Item Polaris-Stack__Item--fill">
+                                      <p>
+                                        Shopping Feed For Google </p>
+                                      <span class="Polaris-TextStyle--variationSubdued">Google Shopping Actions
+                                        (Order), Google Ads &amp; Shopping Feeds.</span>
+                                    </div>
+                                    <div class="Polaris-Stack__Item">
+                                      <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                          d="M5.50001 0.833374L6.78751 3.44171L9.66668 3.86254L7.58334 5.89171L8.07501 8.75837L5.50001 7.40421L2.92501 8.75837L3.41668 5.89171L1.33334 3.86254L4.21251 3.44171L5.50001 0.833374Z"
+                                          fill="#FFA450" stroke="#FFA450" stroke-linecap="round"
+                                          stroke-linejoin="round"></path>
+                                      </svg>
+
+                                      <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                          d="M5.50001 0.833374L6.78751 3.44171L9.66668 3.86254L7.58334 5.89171L8.07501 8.75837L5.50001 7.40421L2.92501 8.75837L3.41668 5.89171L1.33334 3.86254L4.21251 3.44171L5.50001 0.833374Z"
+                                          fill="#FFA450" stroke="#FFA450" stroke-linecap="round"
+                                          stroke-linejoin="round"></path>
+                                      </svg>
+
+                                      <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                          d="M5.50001 0.833374L6.78751 3.44171L9.66668 3.86254L7.58334 5.89171L8.07501 8.75837L5.50001 7.40421L2.92501 8.75837L3.41668 5.89171L1.33334 3.86254L4.21251 3.44171L5.50001 0.833374Z"
+                                          fill="#FFA450" stroke="#FFA450" stroke-linecap="round"
+                                          stroke-linejoin="round"></path>
+                                      </svg>
+
+                                      <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                          d="M5.50001 0.833374L6.78751 3.44171L9.66668 3.86254L7.58334 5.89171L8.07501 8.75837L5.50001 7.40421L2.92501 8.75837L3.41668 5.89171L1.33334 3.86254L4.21251 3.44171L5.50001 0.833374Z"
+                                          fill="#FFA450" stroke="#FFA450" stroke-linecap="round"
+                                          stroke-linejoin="round"></path>
+                                      </svg>
+
+                                      <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                          d="M5.50001 0.833374L6.78751 3.44171L9.66668 3.86254L7.58334 5.89171L8.07501 8.75837L5.50001 7.40421L2.92501 8.75837L3.41668 5.89171L1.33334 3.86254L4.21251 3.44171L5.50001 0.833374Z"
+                                          fill="#FFA450" stroke="#FFA450" stroke-linecap="round"
+                                          stroke-linejoin="round"></path>
+                                      </svg>
+
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="Polaris-ResourceList__ItemWrapper">
+                            <div class="Polaris-ResourceItem">
+                              <a class="Polaris-ResourceItem__Link py-5"
+                                href="https://apps.shopify.com/etsy-marketplace-integration?surface_detail=cedcommerce&amp;surface_inter_position=1&amp;surface_intra_position=3&amp;surface_type=search"
+                                target="_blank"></a>
+                              <div class="Polaris-ResourceItem__Container">
+                                <div class="Polaris-ResourceItem__Owned">
+                                  <div class="Polaris-ResourceItem__Media mr-10">
+                                    <span aria-label="Yi So-Yeon" role="img"
+                                      class="Polaris-Avatar Polaris-Avatar--sizeMedium Polaris-Avatar--hasImage">
+                                      <img class="Polaris-Avatar__Image"
+                                        src="/integration/static/modules/walmart/assets/images/etsy.png"
+                                        alt="Etsy Marketplace Integration"> </span>
+                                  </div>
+                                </div>
+                                <div class="Polaris-ResourceItem__Content">
+                                  <div class="Polaris-Stack Polaris-Stack--noWrap Polaris-Stack--alignmentCenter">
+                                    <div class="Polaris-Stack__Item Polaris-Stack__Item--fill">
+                                      <p>
+                                        Etsy Marketplace Integration </p>
+                                      <span class="Polaris-TextStyle--variationSubdued">Sync &amp; Automate to
+                                        selling process from Shopify to Etsy.</span>
+                                    </div>
+                                    <div class="Polaris-Stack__Item">
+                                      <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                          d="M5.50001 0.833374L6.78751 3.44171L9.66668 3.86254L7.58334 5.89171L8.07501 8.75837L5.50001 7.40421L2.92501 8.75837L3.41668 5.89171L1.33334 3.86254L4.21251 3.44171L5.50001 0.833374Z"
+                                          fill="#FFA450" stroke="#FFA450" stroke-linecap="round"
+                                          stroke-linejoin="round"></path>
+                                      </svg>
+
+                                      <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                          d="M5.50001 0.833374L6.78751 3.44171L9.66668 3.86254L7.58334 5.89171L8.07501 8.75837L5.50001 7.40421L2.92501 8.75837L3.41668 5.89171L1.33334 3.86254L4.21251 3.44171L5.50001 0.833374Z"
+                                          fill="#FFA450" stroke="#FFA450" stroke-linecap="round"
+                                          stroke-linejoin="round"></path>
+                                      </svg>
+
+                                      <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                          d="M5.50001 0.833374L6.78751 3.44171L9.66668 3.86254L7.58334 5.89171L8.07501 8.75837L5.50001 7.40421L2.92501 8.75837L3.41668 5.89171L1.33334 3.86254L4.21251 3.44171L5.50001 0.833374Z"
+                                          fill="#FFA450" stroke="#FFA450" stroke-linecap="round"
+                                          stroke-linejoin="round"></path>
+                                      </svg>
+
+                                      <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                          d="M5.50001 0.833374L6.78751 3.44171L9.66668 3.86254L7.58334 5.89171L8.07501 8.75837L5.50001 7.40421L2.92501 8.75837L3.41668 5.89171L1.33334 3.86254L4.21251 3.44171L5.50001 0.833374Z"
+                                          fill="#FFA450" stroke="#FFA450" stroke-linecap="round"
+                                          stroke-linejoin="round"></path>
+                                      </svg>
+
+                                      <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                          d="M5.50001 0.833374L6.78751 3.44171L9.66668 3.86254L7.58334 5.89171L8.07501 8.75837L5.50001 7.40421L2.92501 8.75837L3.41668 5.89171L1.33334 3.86254L4.21251 3.44171L5.50001 0.833374Z"
+                                          fill="#FFA450" stroke="#FFA450" stroke-linecap="round"
+                                          stroke-linejoin="round"></path>
+                                      </svg>
+
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="Polaris-ResourceList__ItemWrapper">
+                            <div class="Polaris-ResourceItem">
+                              <a class="Polaris-ResourceItem__Link py-5"
+                                href="https://apps.shopify.com/walmart-canada-marketplace-integration?surface_detail=walmart+ca&amp;surface_inter_position=1&amp;surface_intra_position=4&amp;surface_type=search"
+                                target="_blank"></a>
+                              <div class="Polaris-ResourceItem__Container">
+                                <div class="Polaris-ResourceItem__Owned">
+                                  <div class="Polaris-ResourceItem__Media mr-10">
+                                    <span aria-label="Yi So-Yeon" role="img"
+                                      class="Polaris-Avatar Polaris-Avatar--sizeMedium Polaris-Avatar--hasImage">
+                                      <img class="Polaris-Avatar__Image"
+                                        src="/integration/static/modules/walmart/assets/images/walmartcanada.png"
+                                        alt="Walmart‑CA Integration"> </span>
+                                  </div>
+                                </div>
+                                <div class="Polaris-ResourceItem__Content">
+                                  <div class="Polaris-Stack Polaris-Stack--noWrap Polaris-Stack--alignmentCenter">
+                                    <div class="Polaris-Stack__Item Polaris-Stack__Item--fill">
+                                      <p>
+                                        Walmart‑CA Integration </p>
+                                      <span class="Polaris-TextStyle--variationSubdued">Sell on Walmart Canada,
+                                        list your products and manage orders.</span>
+                                    </div>
+                                    <div class="Polaris-Stack__Item">
+                                      <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                          d="M5.50001 0.833374L6.78751 3.44171L9.66668 3.86254L7.58334 5.89171L8.07501 8.75837L5.50001 7.40421L2.92501 8.75837L3.41668 5.89171L1.33334 3.86254L4.21251 3.44171L5.50001 0.833374Z"
+                                          fill="#FFA450" stroke="#FFA450" stroke-linecap="round"
+                                          stroke-linejoin="round"></path>
+                                      </svg>
+
+                                      <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                          d="M5.50001 0.833374L6.78751 3.44171L9.66668 3.86254L7.58334 5.89171L8.07501 8.75837L5.50001 7.40421L2.92501 8.75837L3.41668 5.89171L1.33334 3.86254L4.21251 3.44171L5.50001 0.833374Z"
+                                          fill="#FFA450" stroke="#FFA450" stroke-linecap="round"
+                                          stroke-linejoin="round"></path>
+                                      </svg>
+
+                                      <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                          d="M5.50001 0.833374L6.78751 3.44171L9.66668 3.86254L7.58334 5.89171L8.07501 8.75837L5.50001 7.40421L2.92501 8.75837L3.41668 5.89171L1.33334 3.86254L4.21251 3.44171L5.50001 0.833374Z"
+                                          fill="#FFA450" stroke="#FFA450" stroke-linecap="round"
+                                          stroke-linejoin="round"></path>
+                                      </svg>
+
+                                      <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                          d="M5.50001 0.833374L6.78751 3.44171L9.66668 3.86254L7.58334 5.89171L8.07501 8.75837L5.50001 7.40421L2.92501 8.75837L3.41668 5.89171L1.33334 3.86254L4.21251 3.44171L5.50001 0.833374Z"
+                                          fill="#FFA450" stroke="#FFA450" stroke-linecap="round"
+                                          stroke-linejoin="round"></path>
+                                      </svg>
+
+                                      <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                          d="M5.50001 0.833374L6.78751 3.44171L9.66668 3.86254L7.58334 5.89171L8.07501 8.75837L5.50001 7.40421L2.92501 8.75837L3.41668 5.89171L1.33334 3.86254L4.21251 3.44171L5.50001 0.833374Z"
+                                          fill="#FFA450" stroke="#FFA450" stroke-linecap="round"
+                                          stroke-linejoin="round"></path>
+                                      </svg>
+
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="Polaris-ResourceList__ItemWrapper">
+                            <div class="Polaris-ResourceItem">
+                              <a class="Polaris-ResourceItem__Link py-5"
+                                href="https://apps.shopify.com/ebay-integration?surface_detail=E+bay&amp;surface_inter_position=1&amp;surface_intra_position=5&amp;surface_type=search"
+                                target="_blank"></a>
+                              <div class="Polaris-ResourceItem__Container">
+                                <div class="Polaris-ResourceItem__Owned">
+                                  <div class="Polaris-ResourceItem__Media mr-10">
+                                    <span aria-label="Yi So-Yeon" role="img"
+                                      class="Polaris-Avatar Polaris-Avatar--sizeMedium Polaris-Avatar--hasImage">
+                                      <img class="Polaris-Avatar__Image"
+                                        src="/integration/static/modules/walmart/assets/images/ebay.png"
+                                        alt="eBay Marketplace Integration"> </span>
+                                  </div>
+                                </div>
+                                <div class="Polaris-ResourceItem__Content">
+                                  <div class="Polaris-Stack Polaris-Stack--noWrap Polaris-Stack--alignmentCenter">
+                                    <div class="Polaris-Stack__Item Polaris-Stack__Item--fill">
+                                      <p>
+                                        eBay Marketplace Integration </p>
+                                      <span class="Polaris-TextStyle--variationSubdued">Effortlessly sell on
+                                        eBay to improvise sales.</span>
+                                    </div>
+                                    <div class="Polaris-Stack__Item">
+                                      <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                          d="M5.50001 0.833374L6.78751 3.44171L9.66668 3.86254L7.58334 5.89171L8.07501 8.75837L5.50001 7.40421L2.92501 8.75837L3.41668 5.89171L1.33334 3.86254L4.21251 3.44171L5.50001 0.833374Z"
+                                          fill="#FFA450" stroke="#FFA450" stroke-linecap="round"
+                                          stroke-linejoin="round"></path>
+                                      </svg>
+
+                                      <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                          d="M5.50001 0.833374L6.78751 3.44171L9.66668 3.86254L7.58334 5.89171L8.07501 8.75837L5.50001 7.40421L2.92501 8.75837L3.41668 5.89171L1.33334 3.86254L4.21251 3.44171L5.50001 0.833374Z"
+                                          fill="#FFA450" stroke="#FFA450" stroke-linecap="round"
+                                          stroke-linejoin="round"></path>
+                                      </svg>
+
+                                      <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                          d="M5.50001 0.833374L6.78751 3.44171L9.66668 3.86254L7.58334 5.89171L8.07501 8.75837L5.50001 7.40421L2.92501 8.75837L3.41668 5.89171L1.33334 3.86254L4.21251 3.44171L5.50001 0.833374Z"
+                                          fill="#FFA450" stroke="#FFA450" stroke-linecap="round"
+                                          stroke-linejoin="round"></path>
+                                      </svg>
+
+                                      <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                          d="M5.50001 0.833374L6.78751 3.44171L9.66668 3.86254L7.58334 5.89171L8.07501 8.75837L5.50001 7.40421L2.92501 8.75837L3.41668 5.89171L1.33334 3.86254L4.21251 3.44171L5.50001 0.833374Z"
+                                          fill="#FFA450" stroke="#FFA450" stroke-linecap="round"
+                                          stroke-linejoin="round"></path>
+                                      </svg>
+
+                                      <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                          d="M5.50001 0.833374L6.78751 3.44171L9.66668 3.86254L7.58334 5.89171L8.07501 8.75837L5.50001 7.40421L2.92501 8.75837L3.41668 5.89171L1.33334 3.86254L4.21251 3.44171L5.50001 0.833374Z"
+                                          fill="#FFA450" stroke="#FFA450" stroke-linecap="round"
+                                          stroke-linejoin="round"></path>
+                                      </svg>
+
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Social Links -->
+                  <div style="display: none" class="Polaris-Card show-tab">
+                    <div class="Polaris-Card__Header">
+                      <div class="Polaris-Stack Polaris-Stack--alignmentBaseline">
+                        <div class="Polaris-Stack__Item Polaris-Stack__Item--fill">
+                          <h2 class="Polaris-Heading">Social Links</h2>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="Polaris-Card__Section">
+                      <div class="social-links-wrap">
+                        <ul class="list-inline">
+                          <li class="twitter">
+                            <a href="https://twitter.com/cedcommerce?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+                              target="_blank">
+                              <span class="fa fa-twitter"></span>
+                            </a>
+                          </li>
+                          <li class="facebook">
+                            <a href="https://www.facebook.com/CedCommerce/" target="_blank">
+                              <span class="fa fa-facebook"></span>
+                            </a>
+                          </li>
+                          <li class="linkedin">
+                            <a href="https://www.linkedin.com/authwall?trk=bf&amp;trkInfo=AQGrBPXOEalMTQAAAWArrVUgzY5WsceJ1CPkoqrzfEgW-DO3zMyUpzVFZcUggY-w9cCL_t64GT8IECA2K47KDkyf85C4QwflYG-60kWt0fp_kf6esqnMnsXenfMWltS3hUX7Y7o=&amp;originalReferer=&amp;sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fcedcommerce"
+                              target="_blank">
+                              <span class="fa fa-linkedin"></span>
+                            </a>
+                          </li>
+                          <li class="youtube">
+                            <a href="https://www.youtube.com/channel/UCLRUCC_jvKf4tfZ2omjaW8Q" target="_blank">
+                              <span class="fa fa-youtube"></span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="Polaris-Card__Section">
+                      <div class="Polaris-Card__SectionHeader">
+                        <div class="links-wrap">
+                          <ul class="list-unstyled">
+                            <li><a href="https://cedcommerce.com/blog/shopify/" target="_blank">Blogs</a></li>
+                            <li><a href="https://apps.cedcommerce.com/faq/?marketplace=walmart"
+                                target="_blank">FAQ's</a></li>
+                            <li><a href="https://apps.cedcommerce.com/case-studies/" target="_blank">News</a>
+                            </li>
+                            <li><a href="https://docs.cedcommerce.com/shopify/walmart-shopify-integration-guide/"
+                                target="_blank">Documentation</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="Polaris-Layout__Section Polaris-Layout__Section--secondary Custom-flyer-right">
+
+                  <!-- Right Flyer Starts  -->
+                  <div class="Polaris-Card custom-flyer-header" style="display: none">
+                    <div class="Polaris-Card__Header pb-10">
+                      <div class="Polaris-Stack Polaris-Stack--alignmentBaseline">
+                        <div class="Polaris-Stack__Item Polaris-Stack__Item--fill">
+                          <h2 class="Polaris-Heading">Account Analysis</h2>
+                        </div>
+                        <div class="Polaris-Stack__Item">
+                          <div class="Polaris-ButtonGroup">
+                            <div class="Polaris-ButtonGroup__Item Polaris-ButtonGroup__Item--plain">
+                              <button onclick="rightTabFlyerClose();" type="button"
+                                class="Polaris-Button Polaris-Button--plain daterange-btn"><span
+                                  class="Polaris-Button__Content"><svg width="20" height="20" viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M11.414 10l6.293-6.293a.999.999 0 1 0-1.414-1.414L10 8.586 3.707 2.293a.999.999 0 1 0-1.414 1.414L8.586 10l-6.293 6.293a.999.999 0 1 0 1.414 1.414L10 11.414l6.293 6.293a.997.997 0 0 0 1.414 0 .999.999 0 0 0 0-1.414L11.414 10z"
+                                      fill="#637381" fill-rule="evenodd"></path>
+                                  </svg></span></button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Right Flyer Ends  -->
+
+                  <!-- Product Section -->
+                  <div class="Polaris-Card mb-20">
+                    <div class="Polaris-Card__Header">
+                      <div class="Polaris-Stack Polaris-Stack--alignmentBaseline">
+                        <div class="Polaris-Stack__Item Polaris-Stack__Item--fill">
+                          <h2 class="Polaris-Heading">Products</h2>
+                        </div>
+                        <div class="Polaris-Stack__Item">
+                          <p class="Polaris-DisplayText Polaris-DisplayText--sizeMedium">
+                            <strong>3737</strong>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="Polaris-Card__Section">
+                      <div class="Polaris-ResourceList__ResourceListWrapper">
+                        <ul class="Polaris-ResourceList" aria-live="polite">
+
+                          <li class="Polaris-ResourceList__ItemWrapper">
+                            <div class="Polaris-ResourceItem">
+
+                              <a class="Polaris-ResourceItem__Link"
+                                href="/integration/walmart/product/index?WalmartProductSearch[status]=2"></a>
+
+                              <div class="Polaris-ResourceItem__Container">
+                                <div class="Polaris-ResourceItem__Content">
+                                  <div class="Polaris-Stack">
+                                    <div class="Polaris-Stack__Item Polaris-Stack__Item--fill">
+                                      Published</div>
+                                    <div class="Polaris-Stack__Item">
+                                      <span class="Polaris-TextStyle--variationPositive font-bold">3737</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="Polaris-ResourceList__ItemWrapper">
+                            <div class="Polaris-ResourceItem">
+
+                              <a class="Polaris-ResourceItem__Link"
+                                href="/integration/walmart/product/index?WalmartProductSearch[status]=3"></a>
+
+                              <div class="Polaris-ResourceItem__Container">
+                                <div class="Polaris-ResourceItem__Content">
+                                  <div class="Polaris-Stack">
+                                    <div class="Polaris-Stack__Item Polaris-Stack__Item--fill">
+                                      Unpublished</div>
+                                    <div class="Polaris-Stack__Item">
+                                      <span class="Polaris-TextStyle--variationNegative font-bold">0</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="Polaris-ResourceList__ItemWrapper">
+                            <div class="Polaris-ResourceItem">
+                              <a class="Polaris-ResourceItem__Link"
+                                href="/integration/walmart/product/index?WalmartProductSearch[status]=4"></a>
+                              <div class="Polaris-ResourceItem__Container">
+                                <div class="Polaris-ResourceItem__Content">
+                                  <div class="Polaris-Stack">
+                                    <div class="Polaris-Stack__Item Polaris-Stack__Item--fill">
+                                      Item Processing</div>
+                                    <div class="Polaris-Stack__Item">
+                                      <span class="Polaris-TextStyle--variationPositive font-bold">0</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="Polaris-ResourceList__ItemWrapper">
+                            <div class="Polaris-ResourceItem">
+                              <a class="Polaris-ResourceItem__Link"
+                                href="/integration/walmart/product/index?WalmartProductSearch[status]=1"></a>
+
+                              <div class="Polaris-ResourceItem__Container">
+                                <div class="Polaris-ResourceItem__Content">
+                                  <div class="Polaris-Stack">
+                                    <div class="Polaris-Stack__Item Polaris-Stack__Item--fill">
+                                      Not Uploaded</div>
+                                    <div class="Polaris-Stack__Item">
+                                      <span class="Polaris-TextStyle--variationPositive font-bold">0</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="Polaris-ResourceList__ItemWrapper">
+                            <div class="Polaris-ResourceItem">
+                              <a class="Polaris-ResourceItem__Link"
+                                href="/integration/walmart/product/index?WalmartProductSearch[status]=11"></a>
+                              <div class="Polaris-ResourceItem__Container">
+                                <div class="Polaris-ResourceItem__Content">
+                                  <div class="Polaris-Stack">
+                                    <div class="Polaris-Stack__Item Polaris-Stack__Item--fill">
+                                      Others</div>
+                                    <div class="Polaris-Stack__Item">
+                                      <span class="Polaris-TextStyle--variationPositive font-bold">0</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="Polaris-Card__Section">
+                      <div class="Polaris-Stack">
+                        <div class="Polaris-Stack__Item Polaris-Stack__Item--fill"></div>
+                        <div class="Polaris-Stack__Item">
+                          <a href="/integration/walmart/product/index"> All Products</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--OrderSales analytics start-->
+                  <div class="Polaris-Card mb-20 info-dashboard has-overflow">
+                    <div class="Polaris-Card__Section">
+                      <div class="Polaris-Stack Polaris-Stack--alignmentBaseline">
+                        <div class="Polaris-Stack__Item Polaris-Stack__Item--fill">
+                          <h2 class="Polaris-Heading">Analytics</h2>
+                        </div>
+                        <div class="Polaris-Stack__Item">
+                          <div class="position-relative">
+                            <button type="button" class="Polaris-Button daterange-btn" id="reportrange">
+                              <span class="Polaris-Button__Content">
+                                <span id="filter-text" class="Polaris-Button__Text">Last 30 Days</span>
+                                <span class="Polaris-Button__Icon">
+                                  <div class="Polaris-Button__DisclosureIcon">
+                                    <span class="Polaris-Icon">
+                                      <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false"
+                                        aria-hidden="true">
+                                        <path d="M5 8l5 5 5-5z" fill-rule="evenodd"></path>
+                                      </svg>
+                                    </span>
+                                  </div>
+                                </span>
+                                <span id="filters-dropdown"><span>
+                                  </span>
+                                  <div class="daterangepicker ltr show-ranges opensleft" style="display: none;">
+                                    <div class="ranges">
+                                      <ul>
+                                        <li data-range-key="Today">Today</li>
+                                        <li data-range-key="Yesterday">Yesterday</li>
+                                        <li data-range-key="Last 7 Days">Last 7 Days</li>
+                                        <li data-range-key="Last 30 Days">Last 30 Days</li>
+                                        <li data-range-key="Custom Range">Custom Range</li>
+                                      </ul>
+                                    </div>
+                                    <div class="drp-calendar left">
+                                      <div class="calendar-table"></div>
+                                      <div class="calendar-time" style="display: none;"></div>
+                                    </div>
+                                    <div class="drp-calendar right">
+                                      <div class="calendar-table"></div>
+                                      <div class="calendar-time" style="display: none;"></div>
+                                    </div>
+                                    <div class="drp-buttons"><span class="drp-selected"></span></div>
+                                  </div>
+                                </span></span></button><button class="cancelBtn btn btn-sm btn-default"
+                              type="button">Cancel</button><button class="applyBtn btn btn-sm btn-primary"
+                              disabled="disabled" type="button">Apply</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!--OrderSales ends-->
+
+
+              <!--Marketplace Scope section-->
+
+              <!--Recent Activities-->
+
+
+              <!-- Account information -->
+
+
+              <!--Latest updates section-->
+
+
+              <!-- Social Links -->
+
+            </div>
+          </div>
+
+          <div class="Custom-flyer-right-overlay" onclick=" rightTabFlyerClose();"></div>
+          <div id="get-feeback" style="display: none">
+            <div class="Polaris-FormLayout">
+              <div class="Polaris-FormLayout__Item " id="" style="display:none;">
+                <div class="">
+                  <div class="Polaris-TextField "><input id="feedbackurl" class="Polaris-TextField__Input input-field "
+                      aria-labelledby="TextField1Label" aria-invalid="false" name="feedbackurl"
+                      value="/integration/walmart/site/feedback" type="text">
+                    <div class="Polaris-TextField__Backdrop"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="Polaris-FormLayout__Item " id="" style="display:none;">
+                <div class="">
+                  <div class="Polaris-TextField "><input id="shopify_store_url"
+                      class="Polaris-TextField__Input input-field " aria-labelledby="TextField2Label"
+                      aria-invalid="false" name="shop_name" value="wmx-123.myshopify.com" type="text">
+                    <div class="Polaris-TextField__Backdrop"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="Polaris-FormLayout__Item " id="">
+                <div class="">
+                  <div class="Polaris-Labelled__LabelWrapper  ">
+                    <div class="Polaris-Label"><label id="TextField3Label" for="feedback-email"
+                        class="Polaris-Label__Text">Email Address (if you want us to reply to you).</label>
+                    </div>
+                  </div>
+                  <div class="Polaris-TextField "><input id="feedback-email"
+                      class="Polaris-TextField__Input input-field " aria-labelledby="TextField3Label"
+                      aria-invalid="false" name="email" value="shwetasingh@cedcommerce.com" type="text"
+                      placeholder="contact@example.com">
+                    <div class="Polaris-TextField__Backdrop"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="Polaris-FormLayout__Item " id="">
+                <div class="">
+                  <div class="Polaris-Labelled__LabelWrapper">
+                    <div class="Polaris-Label"><label id="TextArea4Label" for="feedback-details"
+                        class="Polaris-Label__Text">Your valuable feedback.</label></div>
+                  </div>
+                  <div class="Polaris-TextField Polaris-TextField--multiline "><textarea id="feedback-details"
+                      placeholder="I used this app to help me do x. It would be nice if it did z better."
+                      class="Polaris-TextField__Input " name="details" aria-labelledby="TextArea4Label"
+                      aria-invalid="false"></textarea>
+                    <div class="Polaris-TextField__Backdrop"></div>
+                    <div aria-hidden="true" class="Polaris-TextField__Resizer">
+                      <div class="Polaris-TextField__DummyInput">I used this app to help me do x. It would be
+                        nice if it did z better.</div>
+                      <div class="Polaris-TextField__DummyInput"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="show-popup-cnfrm" style="display: none"></div>
+          <div id="appmodal"></div>
+
+          <!-- Image Gif modal -->
+          <div class="popup-blog-model-show" style="display: none"></div>
+
+          <div id="order_import_exhaust_modal"></div>
+
+          <script type="text/javascript">
+            $(function () {
+              var minDate = '';
+              var start = moment().subtract(30, 'days');
+              var end = moment();
+              //$('#filters-dropdown').show();
+
+              $('#reportrange').daterangepicker({
+                "showDropdowns": true,
+                ranges: {
+                  'Today': [moment().subtract(0, 'days'), moment()],
+                  'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                  'Last 7 Days': [moment().subtract(7, 'days'), moment()],
+                  'Last 30 Days': [moment().subtract(30, 'days'), moment()],
+                },
+                locale: {
+                  format: 'DD MMM YYYY',
+                },
+                startDate: start,
+                endDate: end,
+                minDate: minDate,
+                maxDate: end,
+                showCustomRangeLabel: true,
+                alwaysShowCalendars: false,
+                opens: "left",
+                parentEl: "#filters-dropdown"
+
+              }, function (start, end, label) {
+                var diff = Math.floor((Date.parse(end) - Date.parse(start)) / 86400000);
+                if (label == 'Custom Range') {
+                  if (diff <= 7) {
+                    range = 'week';
+                  } else if (diff <= '30') {
+                    range = 'month';
+                  } else if (diff <= '365') {
+                    range = 'year';
+                  } else {
+                    range = 'above_year';
+                  }
+                } else if (label == 'Last 7 Days' || label == 'Today' || label == 'Yesterday') {
+                  range = 'week';
+                } else if (label == 'Last 30 Days') {
+                  range = 'month';
+                }
+                createGraph(range, start.format('YYYY-MM-DD H:s:i'), end.format('YYYY-MM-DD H:s:i'), '',
+                  label);
+              });
+
+              $('#reportrange').click(function () {
+                $('#filters-dropdown').dropdown('toggle');
+              });
+
+              var orderExhaustPopup = false;
+
+              if (orderExhaustPopup) {
+                openOrderImportExhaustModal();
+              }
+
+            });
+
+
+            $(document).ready(function () {
+              rating_star();
+
+            });
+
+            // Analysis Chart script
+
+            if ($('#myChart').length) {
+              var ctx = document.getElementById('myChart').getContext('2d');
+
+              var salesChart = new Chart(ctx, {
+                type: 'bar',
+                data: {},
+                options: {
+                  scales: {
+                    yAxes: [{
+                      ticks: {
+                        beginAtZero: true
+                      },
+                      scaleLabel: {
+                        display: true,
+                        labelString: 'REVENUE($)'
+                      }
+                    }]
+                  },
+                  plugins: {
+                    legend: {
+                      display: false,
+                    }
+                  },
+                  responsive: true,
+                  autoSkip: true,
+                }
+              });
+
+            }
+
+
+            if ($('#orderChart').length) {
+              var ctx1 = document.getElementById('orderChart').getContext('2d');
+              var orderChart = new Chart(ctx1, {
+                type: 'bar',
+                options: {
+                  plugins: {
+                    legend: {
+                      display: false,
+                    }
+                  },
+                  responsive: true,
+                  scales: {
+                    x: {
+                      stacked: true,
+                    },
+                    y: {
+                      stacked: true
+                    }
+                  }
+                }
+              });
+            }
+
+            function createGraph(param, start = null, end = null, ele = '', label = '') {
+              if ($('#orderChart').length && $('#myChart').length) {
+                if (ele != '') {
+                  $(ele).closest('.Polaris-Popover__PopoverOverlay').hide();
+                  var text_val = $(ele).text();
+                  $('#filter-text').text(text_val);
+                }
+                $('.loader').show();
+                $('.loader-message').html('Please wait, we are fetching the sales statistic');
+                if (label == '') {
+                  label = 'Last 30 Days';
+                  $("#filter-text").text("Last 30 Days");
+                } else {
+                  $("#filter-text").text(label);
+                }
+                if (start == null) {
+                  var startObj = new Date();
+                  var endObj = new Date();
+                  startObj.setDate(startObj.getDate() - 30);
+                  start = startObj.getFullYear() + '-' + (startObj.getMonth() + 1) + '-' + startObj.getDate() + ' ' + '0:0:i';
+                  endObj.setDate(endObj.getDate() - 0);
+                  end = endObj.getFullYear() + '-' + (endObj.getMonth() + 1) + '-' + endObj.getDate() + ' ' + '23:59:i';
+                }
+
+                $.ajax({
+                  method: "post",
+                  url: '/integration/walmart/dashboard/get-dashboard-graph',
+                  data: {
+                    merchant_id: '15761',
+                    _csrf: 'R2ljaXV2Zk91HDwxWE4RfAAYOxwDJTx.ERgKW0VCVTsGOVQFQEUyPw==',
+                    param: param,
+                    startDate: start,
+                    endDate: end,
+                    label: label
+                  },
+                  dataType: 'json'
+                }).done(function (response) {
+
+                  var error_count = 0;
+
+                  if (response.sales_statistics.hasOwnProperty('error')) {
+                    error_count += 1;
+                    //$('.saleschart').hide();
+                    $('#sample_sales_img').show();
+                    $('.salesChart').hide();
+                    $('#total_sales').html('$ 0');
+
+                  }
+                  if (response.order_statistics.hasOwnProperty('error')) {
+                    error_count += 1;
+                    $('#sample_orders_img').show();
+                    $('#total_orders').html('0');
+                    $('.orderChartDiv').hide();
+
+                  }
+
+
+                  if (error_count == 1) {
+                    console.log(error_count);
+                    $('#sample_sales_img').hide();
+                    $('.salesChart').show();
+                    $('#sample_orders_img').hide();
+                    $('.orderChartDiv').show();
+                  }
+
+                  if (response.sales_statistics.labels) {
+                    salesChart.data = {
+                      labels: response.sales_statistics.labels,
+                      datasets: [{
+                        data: response.sales_statistics.data,
+                        borderWidth: 1,
+                        maxBarThickness: 36,
+                        backgroundColor: '#449da7',
+                      }]
+                    };
+                    salesChart.update();
+                    $('#total_sales').text('$ ' + response.sales_statistics.total_sales);
+                    if (error_count == 0) {
+                      $('#sample_sales_img').hide();
+                      $('.salesChart').show();
+                    }
+
+                  }
+
+                  if (response.order_statistics.labels) {
+                    orderChart.data = {
+
+                      labels: response.order_statistics.labels,
+                      datasets: [{
+                        label: response.order_statistics.data.other.label,
+                        data: response.order_statistics.data.other.data,
+                        backgroundColor: '#003f5c',
+                        stack: 'Stack 0',
+                        borderWidth: 1,
+                        maxBarThickness: 36,
+                      },
+                      {
+                        label: response.order_statistics.data.failed.label,
+                        data: response.order_statistics.data.failed.data,
+                        backgroundColor: '#ff6361',
+                        stack: 'Stack 0',
+                        borderWidth: 1,
+                        maxBarThickness: 36,
+                      },
+                      {
+                        label: response.order_statistics.data.cancelled.label,
+                        data: response.order_statistics.data.cancelled.data,
+                        backgroundColor: '#EEB868',
+                        stack: 'Stack 0',
+                        borderWidth: 1,
+                        maxBarThickness: 36,
+                      },
+                      {
+                        label: response.order_statistics.data.acknowledged.label,
+                        data: response.order_statistics.data.acknowledged.data,
+                        backgroundColor: '#D1D1CD',
+                        stack: 'Stack 0',
+                        maxBarThickness: 36,
+                      },
+                      {
+                        label: response.order_statistics.data.completed.label,
+                        data: response.order_statistics.data.completed.data,
+                        backgroundColor: '#49DCB1',
+                        stack: 'Stack 0',
+                        borderWidth: 1,
+                        maxBarThickness: 36,
+                      },
+                      ]
+                    };
+                    orderChart.update();
+                    $('#total_orders').html(response.order_statistics.orderCount);
+                    $('#completed').html(response.order_statistics.data.completed.count);
+                    $('#acknowledged').html(response.order_statistics.data.acknowledged.count);
+                    $('#cancelled').html(response.order_statistics.data.cancelled.count);
+                    $('#failed').html(response.order_statistics.data.failed.count);
+                    $('#other').html(response.order_statistics.data.other.count);
+                    if (error_count == 0) {
+                      $('#sample_orders_img').hide();
+                      $('.orderChartDiv').show();
+                      $('#orderChart').parent().show();
+                    }
+
+                  }
+
+                  $('.loader-message').html('');
+                  $('.loader').hide();
+                });
+              }
+            }
+            /*Call chart on tab click end*/
+
+            function rightTabFlyer() {
+              $('.Custom-flyer-right,.Custom-flyer-right-overlay').addClass('active');
+              $('body').addClass('Polaris-modal-open');
+            }
+
+            function rightTabFlyerClose() {
+              $('.Custom-flyer-right,.Custom-flyer-right-overlay').removeClass('active');
+              $('body').removeClass('Polaris-modal-open');
+            }
+
+            $(function () {
+              createGraph('month');
+            });
+
+
+            /*Review stars on dashboard*/
+
+            function rating_star() {
+              $('.rating-container i').on('click', function (e) {
+                $('.rating-container i').removeClass('active');
+                $(this).nextAll('i').addClass('active');
+                $(this).addClass('active');
+                if ($(this).prevAll('i').length <= 1) {
+                  window.open(
+                    'https://apps.shopify.com/walmart-marketplace-integration?#modal-show=ReviewListingModal&ref=cedcommerce'
+                  );
+                } else {
+                  var rating = '(' + ($(this).nextAll('i').length + 1) + ' star)';
+                  if ($('#review_rating').length) {
+                    $('#review_rating').val(rating);
+                  } else {
+                    $('<input>').attr({
+                      type: 'hidden',
+                      id: 'review_rating',
+                      value: rating
+                    }).appendTo('#get-feeback');
+                  }
+
+                  var html = $('#get-feeback').html();
+
+                  var popupobj = {
+                    'modal_heading': 'Tell us about your experience with Walmart Marketplace Integration',
+                    'modal_message': html,
+                    'close_button_onclick': 'popupFeedbackStatus(0)',
+                    'close_icon_onclick': 'popupFeedbackStatus(0)',
+                    'confirm_button_onclick': 'popupFeedbackStatus(1)',
+                    'confirm_button_text': 'Submit'
+                  };
+                  $('#show-popup-cnfrm').html(confirmPopup(popupobj));
+                  $('#show-popup-cnfrm').show();
+                }
+              })
+            }
+
+            function popupFeedbackStatus(response) {
+              if (response) {
+                var feedback_url = $('#show-popup-cnfrm #feedbackurl').val();
+                var feedback_email = $('#show-popup-cnfrm #feedback-email').val();
+                var review_rating = $('#show-popup-cnfrm #review_rating').val();
+                var shopify_store_url = $('#show-popup-cnfrm #shopify_store_url').val() + review_rating;
+                var feedback_info = $('#show-popup-cnfrm #feedback-details').val();
+
+                if (feedback_info.trim() == '') {
+                  alert_msg('Please enter your valuable feedback!', 'error', 'center', 2000);
+                } else {
+                  var msg = "Please wait";
+                  $('#LoadingMSG').show();
+                  $.ajax({
+                    method: "post",
+                    url: feedback_url,
+                    data: {
+                      shop: shopify_store_url,
+                      email: feedback_email,
+                      feedback: feedback_info,
+                    },
+                    dataType: 'json'
+                  }).done(function (response) {
+
+                    alert_msg(
+                      'Thank you for your valuable feedback, one of our team member will get back to you shortly!',
+                      'success', 'center', 2000, 'relax');
+                    $('#LoadingMSG').hide();
+                    $('#show-popup-cnfrm').hide();
+                  });
+                }
+              } else {
+                $('#show-popup-cnfrm').hide();
+              }
+            }
+
+            /*Review stars on dashboard ends*/
+
+            function showModal() {
+              $('.popup-model-show').show();
+              addRemoveBodyClass(1);
+            }
+
+            function hideModal() {
+              $('.popup-model-show').hide();
+              addRemoveBodyClass(0);
+            }
+
+            function showBlogModal(heading, gif_url) {
+              var gifModalUrl = "/integration/walmart/site/render-gif-modal";
+              $('#LoadingMSG').show();
+
+              $.ajax({
+                method: "post",
+                url: gifModalUrl,
+                data: {
+                  heading: heading,
+                  gif: gif_url,
+                },
+                dataType: 'json'
+              }).done(function (response) {
+                console.log(response.success);
+                if (response.success) {
+                  $('.popup-blog-model-show').html(response.html);
+                  $('.popup-blog-model-show').show();
+                  $('.popup-blog-model-show').css({
+                    "display": "block"
+                  });
+                  addRemoveBodyClass(1);
+                }
+                $('#LoadingMSG').hide();
+              });
+            }
+
+            function hideBlogModal() {
+              $('.popup-blog-model-show').hide();
+              addRemoveBodyClass(0);
+            }
+
+            $(".refresh-button").on("click", function () {
+
+              $(this).find("svg").attr("class", "Polaris-Spinner");
+              url = $(this).find("svg").attr("meta-href");
+              setTimeout(function () {
+                window.location.replace(url);
+              }, 1000);
+
+            });
+
+            function openOrderImportExhaustModal() {
+              var order_pop_up_url = "/integration/walmart/site/open-order-modal";
+
+              $.ajax({
+                url: order_pop_up_url,
+                method: "post",
+                dataType: 'json',
+                data: {},
+                success: function (json) {
+                  $("#order_import_exhaust_modal").html(json.html);
+                  addRemoveBodyClass(1);
+                },
+              })
+            }
+
+            function goToDashboard() {
+              window.location.assign("/integration/walmart/site/set-order-exhaust-session");
+            }
+
+            /*on dashboard for daterange button*/
+            $(window).on('scroll', function () {
+              $('.daterangepicker').css('display', 'none');
+              $('.Polaris-Button').addClass('daterange-btn')
+            })
+
+            $('#reportrange').on('click', function () {
+              $('.daterangepicker').css('display', 'block');
+              $('.Polaris-Button').removeClass('daterange-btn')
+            })
+
+            /*custom daterange */
+            $(document).ready(function () {
+              $('[data-range-key="Custom Range"]').on('click', function () {
+                $('.daterangepicker').css(
+                  {
+                    'height': '100%',
+                    'min-height': '400px',
+                    'overflow-y': 'scroll'
+                  }
+                )
+              })
+              $('li:not([data-range-key="Custom Range"])').on('click', function () {
+                $('.daterangepicker').css(
+                  {
+                    'height': 'unset',
+                    'min-height': 'unset',
+                    'overflow-y': 'unset'
+                  }
+                )
+              })
+            });
+
+          </script>
+          <div class="loader" id="LoadingMSG" style="display: none;">
+            <div class="polaris-loader">
+              <svg viewBox="0 0 44 44" class="Polaris-Spinner Polaris-Spinner--colorTeal Polaris-Spinner--sizeLarge"
+                role="status">
+                <path
+                  d="M15.542 1.487A21.507 21.507 0 0 0 .5 22c0 11.874 9.626 21.5 21.5 21.5 9.847 0 18.364-6.675 20.809-16.072a1.5 1.5 0 0 0-2.904-.756C37.803 34.755 30.473 40.5 22 40.5 11.783 40.5 3.5 32.217 3.5 22c0-8.137 5.3-15.247 12.942-17.65a1.5 1.5 0 1 0-.9-2.863z">
+                </path>
+              </svg>
+              <span class="Polaris-TextStyle--variationSubdued mt-20">
+                <span class="loader-message"></span>
+              </span>
+            </div>
+          </div>
+          <script
+            type="text/javascript">var clientOptions = { "DeleteNotification": "/integration/walmart/activities/delete-notification", "AbortProcess": "/integration/walmart/activities/abort-process", "app_name": "walmart", "merchant_id": 15761, "shop_url": "wmx-123.myshopify.com", "helperClassName": "frontend\\modules\\walmart\\components\\ActivityHelper", "ced_socket_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VyX2lkIjoid214LTEyMy5teXNob3BpZnkuY29tX3dhbG1hcnQifQ.fWA_5Ycy7Z4Y2kvgmBo2J94a3wN_tdy2fAtIvYNKkLmwCtvPRTt4tTCBEjkUtMVz20_RRjwyPRS8XRlvN1CnsgWqB1eMxcE43l-U3aWCKCK9MuZL7pjZCPYUF9leCJv1PFFYyFvN0p9gqHoyK31ahS5KeogbosGuVtQc4-t4tDtW3MGSRDn9OCCuFEzJYQlb_1SBz5K3M9aWa1Xk7vdCnppOuUe8AjZ8FlCOsM3LkcnSDRiTb-izp1A3qsCQDHNSaYMOKUxPUrYkXF14xWTZtUN7L1TL7WG5KZrWzTPtatOJR57rkHxZhIc8jkrNsqnfOB71fJt_AxYFg5NGJWTzuRZkkulsaeBBjA8SLPh0H1kJp6iIVxoHY7pZpuevVA2Xj2xbC7PkS53v3NQXdJSa5WbSkXpTt_NELP2VywfC_4sl-XHQQqcDXrwfxwe6ebPddGByHhgh2uf0dxLiDp1blpOgJ5T7XVKGHZI_m9goqHk3gA4J6tUwlVg9jGSSKSWzUKXu3_jzcPQlWF4r37Gu-N7JE9ATmK7TjHVLo3m0WIJpvwN4L-9YX95fyPFA1pN7q7i1NWta6PW64GZIXoildvezkX8qKayO40KCVb_ANXXBFpzpxCRGnklUrBX49bZcK5hAtn737K3-n0YSf-dBmsize9iBmRXK87P91L4Uosg", "errorCount": 0, "flayer_flag": true, "activity_url": "/integration/walmart/activities/index" };</script>
+          <div id="ced_import_error" style="display: none;"></div>
+          <div id="ongoing-activity"></div>
+        </div>
+      </main>
+    </div>
+    <div id="PolarisPortalsContainer">
+      <div data-portal-id="popover-Polarisportal3">
+      </div>
+      <div data-portal-id="modal-Polarisportal1">
+        <div>
+        </div>
+      </div>
+      <div data-portal-id="Polarisportal2">
+        <div class="Polaris-Frame-ToastManager" aria-live="assertive">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+
+    document.querySelector(".Polaris-TopBar__NavigationIcon").addEventListener("click", function () {
+      var element = document.querySelector(".Polaris-Frame__Main");
+      element.classList.toggle("navslided");
+
+      var elem = document.querySelector(".Polaris-Frame__Navigation");
+      elem.classList.toggle("navslided");
+
+      var elems = document.querySelector(".Polaris-TopBar__NavigationIcon");
+      elems.classList.toggle("navslided");
+    });
+
+
+    var sidebarList = document.querySelectorAll('.Polaris-Navigation__ListItem');
+    var sidebarBody = document.querySelectorAll('.Polaris-Navigation__SecondaryNavigation');
+    var sidebarSubList = document.querySelectorAll('.Polaris-Navigation__SecondaryNavigation > .Polaris-Navigation__ListItem');
+
+    sidebarList.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        // console.log(e);
+        sidebarList.forEach((acc) => {
+          if (e.target.child != acc &&
+            acc.classList.contains("active")
+          ) {
+            acc.classList.remove("active");
+          }
+        })
+        btn.classList.toggle('active');
+      })
+      
+    })
+
+
+    sidebarSubList.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        console.log(btn);
+        sidebarSubList.forEach((acc) => {
+          if (e.target.siblings != acc &&
+            acc.classList.contains("active")
+          ) {
+            acc.classList.remove("active");
+          }
+        });
+        document.querySelectorAll('.Polaris-Navigation__ListItem').classList.add('active');
+      })
+    })
+
+
+    var obj = document.querySelector(".Polaris-Frame__Navigation");
+    var obj2 = document.querySelector(".Polaris-Frame__NavigationDismiss");
+ 
+    document.querySelector(".Polaris-TopBar__NavigationIcon").addEventListener("click", function () {
+      obj.setAttribute("style", "transform: translateX(0px) !important;");
+      obj2.setAttribute("style", "opacity:1 !important;transform: translateX(0) !important;");
+    });
+    
+    obj2.addEventListener("click", function () {
+      obj.setAttribute("style", "transform: translateX(-100%) !important;");
+      obj2.setAttribute("style", "opacity:0 !important; visibility:hidden");
+    });
+
+
+  </script>
+</body>
+
+</html>
